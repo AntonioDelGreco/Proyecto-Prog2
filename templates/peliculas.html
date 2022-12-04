@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Programacion 2</title>
+        <title>Películas Online</title>
         <!--<link href="css/estilos_index.css" rel="stylesheet">--> <!-- Tira error 404 si en este archivo no hay nada-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8">
@@ -13,19 +13,21 @@
                 <nav>
                     <div>
                         <form method="get" action="peliculas">
-                            <button> 
+                            <button class="boton-menu"> 
                                 <p>Inicio</p>
                             </button>
                         </form> 
                     </div>
                        
-                    <div>
+                    <div class="buscador">
                         <form action="/buscar" method="POST" class="formulario_buscar">
-                            <label for="Buscador">Buscar</label>
-                            <input type="text" name="info_buscar">
+                            <!-- <label for="Buscador">Buscar</label> -->
+
+                            <input type="text" name="info_buscar" placeholder="Que desea buscar?" class="input_buscador">
                             <!-- uso </br> si quiero separar el boton del ingreso de información a buscar.-->
                             <!--Name="..." es la info que recibe Flask en python.-->
-                            <input type="submit" value="Enviar""/>
+
+                            <input type="submit" value="Buscar" class="boton-menu"/>
                         </form>
                     </div>
 
@@ -98,7 +100,7 @@
             }
 
             header {
-                height: 80px;
+                height: 50px;
                 width: 100%;
                 background-color: orange;
             }
@@ -108,14 +110,31 @@
                 flex-direction: row;
             }
 
+            .boton-menu {
+                align-self: center;
+                width: 125px;
+                height: 40px;
+                margin:5px;
+            }
+
+            .buscador {
+                position:absolute;
+                right:5%;
+            }
+
+            .input_buscador {
+                height: 30px;
+                width: 215px;
+            }
+
             #btn-perfil {
                 position: absolute;
-                top:2.5%;
-                right:1.25%;
+                top:0.5%;
+                right:0.25%;
                 border-radius: 50%;
                 border-style:hidden;
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
                 color:white;
                 background-color: blue;
             }
@@ -126,7 +145,6 @@
             #btn-perfil:active {
                 background-color: #6c6cffc5;
             }
-
 
             .boton_inicio {
                 width: 100px;
