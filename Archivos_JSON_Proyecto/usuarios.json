@@ -11,13 +11,47 @@
             {
             "id":"33333"  
             }
-        ]
+        ],
+        "contrasenia":"contraseniasecreta"
     },
     {
-        "nombre":"",
-        "apellido":"",
-        "usuario":"",
-        "id":"",
+        "nombre":"Mateo",
+        "apellido":"Martínez",
+        "usuario":"mateito",
+        "id":"2",
+        "peliculas_comentadas":[
+            {
+                "id":"7" 
+            },
+            {
+                "id":"18"  
+            },
+            {
+                "id":"23"
+            }
+        ],
+        "contrasenia":"contrasenia123"
+    },
+    {
+        "nombre":"Facha",
+        "apellido":"Facha",
+        "usuario":"elfacha",
+        "id":"3",
+        "peliculas_comentadas":[
+            {
+                "id":"22"  
+            },
+            {
+                "id":"24"
+            }
+        ],
+        "contrasenia":"nomiresmicontrasenia"
+    },
+    {
+        "nombre":"Matilde",
+        "apellido":"Carballo",
+        "usuario":"MatildeCarballo",
+        "id":"4",
         "peliculas_comentadas":[
             {
             "id":""  
@@ -25,13 +59,14 @@
             {
             "id":""  
             }
-        ]
+        ],
+        "contrasenia":"contrasenia.com"
     },
     {
-        "nombre":"",
-        "apellido":"",
-        "usuario":"",
-        "id":"",
+        "nombre":"usuario",
+        "apellido":"prueba",
+        "usuario":"usuarioprueba",
+        "id":"5",
         "peliculas_comentadas":[
             {
             "id":""  
@@ -39,34 +74,7 @@
             {
             "id":""  
             }
-        ]
-    },
-    {
-        "nombre":"",
-        "apellido":"",
-        "usuario":"",
-        "id":"",
-        "peliculas_comentadas":[
-            {
-            "id":""  
-            },
-            {
-            "id":""  
-            }
-        ]
-    },
-    {
-        "nombre":"",
-        "apellido":"",
-        "usuario":"",
-        "id":"",
-        "peliculas_comentadas":[
-            {
-            "id":""  
-            },
-            {
-            "id":""  
-            }
-        ]
+        ],
+        "contrasenia":"123"
     }
 ]
