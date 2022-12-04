@@ -3,6 +3,7 @@
     <head>
         <title>Programacion 2</title>
         <!--<link href="css/estilos_index.css" rel="stylesheet">--> <!-- Tira error 404 si en este archivo no hay nada-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8">
     </head>
 
@@ -10,20 +11,31 @@
         <div id="contenedor">
             <header>
                 <nav>
-                    <div class="boton_inicio"><button><a  href="peliculas.html">Inicio</a></button></div>
-
-                    <div class="boton_buscar">
-                        <form action="/peliculas" method="POST">
+                    <div>
+                        <form method="get" action="peliculas">
+                            <button> 
+                                <p>Inicio</p>
+                            </button>
+                        </form> 
+                    </div>
+                       
+                    <div>
+                        <form action="/buscar" method="POST" class="formulario_buscar">
                             <label for="Buscador">Buscar</label>
                             <input type="text" name="info_buscar">
                             <!-- uso </br> si quiero separar el boton del ingreso de información a buscar.-->
                             <!--Name="..." es la info que recibe Flask en python.-->
-                            <input type="submit" value="Enviar" />
+                            <input type="submit" value="Enviar""/>
                         </form>
                     </div>
 
-                    <div class="boton_perfil"><button><a href="perfil.html">Perfil</a></button></div>
-                    
+                    <div>
+                        <form method="get" action="perfil">
+                            <button id="btn-perfil"> 
+                                <span class="material-icons">manage_accounts</span>
+                            </button>
+                        </form> 
+                    </div>
                 </nav>
             </header>
 
@@ -80,21 +92,64 @@
             </footer>
         </div>
         <style>
-        .articulos div {
-            position:relative;
-            display:flex;
-            display:inline-block;
-            margin:15px;
-        }
-        
-        .articulos div p {
-            position:absolute;
-            bottom: -4%;
-            width: 100%;
-            height: 15%;
-            background: #FF7A59;
-            opacity: .6; 
-        }
+            * {
+                padding:0;
+                margin: 0;
+            }
+
+            header {
+                height: 80px;
+                width: 100%;
+                background-color: orange;
+            }
+
+            header nav {
+                display:flex;
+                flex-direction: row;
+            }
+
+            #btn-perfil {
+                position: absolute;
+                top:2.5%;
+                right:1.25%;
+                border-radius: 50%;
+                border-style:hidden;
+                width: 50px;
+                height: 50px;
+                color:white;
+                background-color: blue;
+            }
+
+            button:hover {
+                cursor:pointer;
+            } 
+            #btn-perfil:active {
+                background-color: #6c6cffc5;
+            }
+
+
+            .boton_inicio {
+                width: 100px;
+                height: 80px;
+            }
+
+            .articulos div {
+                position:relative;
+                display:flex;
+                display:inline-block;
+                margin:15px;
+            }
+            
+            .articulos div p {
+                position:absolute;
+                bottom: -4%;
+                width: 100%;
+                height: 15%;
+                background: #FF7A59;
+                opacity: .6; 
+            }
+
+                        /*comentario*/
         </style>
     </body>
 </html>
