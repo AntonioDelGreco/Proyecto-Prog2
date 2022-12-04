@@ -7,7 +7,6 @@ app = Flask(__name__)
 with open('Archivos_JSON_Proyecto/peliculas.json', encoding='utf-8') as archivo_json1:
     peliculas = json.load(archivo_json1)
 
-
 @app.route("/")
 @app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
@@ -22,11 +21,13 @@ def index():
     
     return Response (render_template("peliculas.html",nombre_peliculas=lista_nombres_peliculas, imagenes_peliculas=lista_imagenes_peliculas),status = HTTPStatus.OK)
 
-@app.route("/peliculas/<info>",methods=["GET"])
+@app.route("/buscar/<int:info>",methods=["GET"])
+@app.route("/buscar/<info>",methods=["GET"])
 def buscar(info):
-    return "<h1>" + info + "</h1>"
+    return "<h1> "+ str(info) + "</h1>"
 
-@app.route("/peliculas",methods=["POST"])
+@app.route("/buscar",methods=["POST"])
 def buscar_post():
     info=request.form["info_buscar"]
+    print(info)
     return info
