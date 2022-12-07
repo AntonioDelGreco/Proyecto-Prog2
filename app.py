@@ -1,11 +1,14 @@
-from flask import Flask,request,Response,render_template,redirect,url_for
+from flask import Flask,request,Response,render_template,redirect,url_for, session
 from http import HTTPStatus
 import json
 
 app = Flask(__name__)
+app.secret_key = 'secretKey1234567890'
 
 with open('Archivos_JSON_Proyecto/peliculas.json', encoding='utf-8') as archivo_json1:
     peliculas = json.load(archivo_json1)
+with open('Archivos_JSON_Proyecto/usuarios.json', encoding='utf-8') as file:
+    users = json.load(file)
 
 @app.route("/")
 @app.route("/peliculas.html",methods=["GET"])
@@ -31,3 +34,31 @@ def buscar_post():
     info=request.form["info_buscar"]
     print(info)
     return info
+
+# LOGIN
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+  if 'username' in session:
+    return Response(f'Su usuario ya se encuentra en sesion y es {session["username"]}')
+  if request.method == 'POST':
+    dataUser = {
+      "username": request.form['username'],
+      "password": request.form['password']
+    }
+    for user in users:
+      if dataUser["username"] in user["usuario"] and dataUser["password"] in user["contrasenia"]:
+        session['username'] = dataUser['username']
+        return Response(f'Usuario logueado correctamente, su usuario es: {session["username"]}')
+      else:
+        return Response("Usuario o contraseña incorrectos, intente de nuevo.")
+  return render_template('perfil.html')
+
+@app.route('/logout')
+def logout():
+  session.pop('username', None)
+  return redirect(url_for('index'))
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+if __name__ == "__main__":
+  app.run(debug=True)
