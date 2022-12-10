@@ -4,7 +4,9 @@
         <title>Películas Online</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8">
+
         <link rel="stylesheet" href="../static/css/estilos_index.css">
+        <!-- 304 Not Modified en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. -->
     </head>
 
     <body>
@@ -51,12 +53,14 @@
             <main>
                 <article>
                     <div class="articulos">
-                        {% for i in range(10) %}
-                            <div id="{{i}}">
-                                <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px">
-                                <p> {{ nombre_peliculas[i] }}</p>
-                            </div>
-                        {% endfor %}
+                        {% block content %}
+                            {% for i in range(10) %}
+                                <div id="{{i}}">
+                                    <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px">
+                                    <p> {{ nombre_peliculas[i] }}</p>
+                                </div>
+                            {% endfor %}
+                        {% endblock %}
                     </div>
                 </article>
             </main>
