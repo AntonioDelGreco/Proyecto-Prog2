@@ -38,6 +38,7 @@ def buscar_post():
 # LOGIN
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 @app.route('/login', methods=['GET', 'POST'])
+@app.route('/perfil', methods=['GET', 'POST'])
 def login():
   if 'username' in session:
     return Response(f'Su usuario ya se encuentra en sesion y es {session["username"]}')
@@ -57,7 +58,7 @@ def login():
 @app.route('/logout')
 def logout():
   session.pop('username', None)
-  return redirect(url_for('index'))
+  return redirect(url_for('peliculas'))
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 if __name__ == "__main__":
