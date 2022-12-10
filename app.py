@@ -25,13 +25,26 @@ def index():
             lista_nombres_peliculas.append(i["nombre"])
             lista_imagenes_peliculas.append(i["img"])
     #print(lista_nombres_peliculas)
-    
-    return Response (render_template("peliculas.html",nombre_peliculas=lista_nombres_peliculas, imagenes_peliculas=lista_imagenes_peliculas),status = HTTPStatus.OK,)
+
+    return Response (render_template("peliculas.html",
+    nombre_peliculas=lista_nombres_peliculas,
+    imagenes_peliculas=lista_imagenes_peliculas),
+    status = HTTPStatus.OK,)
 
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
 def buscar(info):
-    return "<h1> "+ str(info) + "</h1>"
+    lista_encontradas=[]
+    for i in peliculas[::-1]:
+        #print(i.values())
+        for j in i.values():
+            if (info in str(j)) and (i not in lista_encontradas):
+                lista_encontradas.append(i)
+
+    return Response (render_template("peliculas.html",
+    nombre_peliculas=[i["nombre"] for i in lista_encontradas],
+    imagenes_peliculas=[i["img"] for i in lista_encontradas]),
+    status = HTTPStatus.OK,)
 
 @app.route("/buscar",methods=["POST"])
 def buscar_post():
