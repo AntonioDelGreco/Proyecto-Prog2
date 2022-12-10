@@ -11,6 +11,10 @@ with open('Archivos_JSON_Proyecto/usuarios.json', encoding='utf-8') as file:
     users = json.load(file)
 
 @app.route("/")
+def retornar():
+  return redirect(url_for("index"),Response=HTTPStatus.OK) #Busca la funcion "index ya definida en 'app'."
+  #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
+
 @app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
 def index():
@@ -22,7 +26,7 @@ def index():
             lista_imagenes_peliculas.append(i["img"])
     #print(lista_nombres_peliculas)
     
-    return Response (render_template("peliculas.html",nombre_peliculas=lista_nombres_peliculas, imagenes_peliculas=lista_imagenes_peliculas),status = HTTPStatus.OK)
+    return Response (render_template("peliculas.html",nombre_peliculas=lista_nombres_peliculas, imagenes_peliculas=lista_imagenes_peliculas),status = HTTPStatus.OK,)
 
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
@@ -31,9 +35,12 @@ def buscar(info):
 
 @app.route("/buscar",methods=["POST"])
 def buscar_post():
-    info=request.form["info_buscar"]
-    print(info)
-    return info
+
+    informacion=request.form["info_buscar"]
+    #print(informacion)
+
+    return redirect(url_for("buscar", info=informacion,next="edit"),Response=HTTPStatus.OK) 
+    #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
 # LOGIN
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
