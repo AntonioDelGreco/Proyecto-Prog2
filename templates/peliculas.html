@@ -51,46 +51,12 @@
             <main>
                 <article>
                     <div class="articulos">
-                        <div id="articulo1">
-                            <img src="{{ imagenes_peliculas[0] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[0] }}</p>
-                        </div>
-                        <div id="articulo2">
-                            <img src="{{ imagenes_peliculas[1] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[1] }}</p>
-                        </div>
-                        <div id="articulo3">
-                            <img src="{{ imagenes_peliculas[2] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[2] }}</p>
-                        </div>
-                        <div id="articulo4">
-                            <img src="{{ imagenes_peliculas[3] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[3] }}</p>
-                        </div>
-                        <div id="articulo5">
-                            <img src="{{ imagenes_peliculas[4] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[4] }}</p>
-                        </div>
-                        <div id="articulo6">
-                            <img src="{{ imagenes_peliculas[5] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[5] }}</p>
-                        </div>
-                        <div id="articulo7">
-                            <img src="{{ imagenes_peliculas[6] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[6] }}</p>
-                        </div>
-                        <div id="articulo8">
-                            <img src="{{ imagenes_peliculas[7] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[7] }}</p>
-                        </div>
-                        <div id="articulo9">
-                            <img src="{{ imagenes_peliculas[8] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[8] }}</p>
-                        </div>
-                        <div id="articulo10">
-                            <img src="{{ imagenes_peliculas[9] }}" alt="imagen" width="200px" height="300px">
-                            <p> {{ nombre_peliculas[9] }}</p>
-                        </div>
+                        {% for i in range(10) %}
+                            <div id="{{i}}">
+                                <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px">
+                                <p> {{ nombre_peliculas[i] }}</p>
+                            </div>
+                        {% endfor %}
                     </div>
                 </article>
             </main>
@@ -165,13 +131,13 @@
             
             .articulos div p {
                 position:absolute;
-                bottom: -4%;
+                bottom:1.25%;
                 width: 100%;
                 height: 15%;
                 background: #FF7A59;
-                opacity: .6; 
+                opacity: .6;
+                align-items: center;
             }
-
                         /*comentario*/
         </style>
     </body>
