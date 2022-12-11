@@ -1,44 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Plantilla Perfil</title>
-        <meta charset="utf-8">
+{% extends './peliculas.html' %}
 
-        <link rel="stylesheet" href="../static/css/estilos_perfil.css">
-        <!-- 304 Not Modified en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. -->
-    </head>
-
-    <body>
-        <div id="contenedor">
-            <header>
-                <nav>
-                    <form method="get" action="peliculas">
-                        <button class="boton-menu"> 
-                            <p>Inicio</p>
-                        </button>
-                    </form> 
-
-                    <form method="get" action="perfil">
-                        <button class="boton-menu"> 
-                            <p>Perfil</p>
-                        </button>
-                    </form> 
-                    
-                </nav>
-            </header>
-
-            <main>
-              <form method="POST">
-                <label for="username">Nombre de usuario</label>
-                <input type="text" placeholder="Usuario" name="username" required autofocus>
-                <label for="password">Contraseña</label>
-                <input type="password" placeholder="Tu contraseña" name="password" required>
-                <input type="submit">
-              </form>
-            </main>
-
-            <footer>
-            </footer>
-        </div>
-    </body>
-</html>
+{% block content %}
+<form method="POST">
+  <label for="username">Nombre de usuario</label>
+  <input type="text" placeholder="Usuario" name="username" required autofocus>
+  <label for="password">Contraseña</label>
+  <input type="password" placeholder="Tu contraseña" name="password" required>
+  <input type="submit">
+</form>
+{% endblock %}

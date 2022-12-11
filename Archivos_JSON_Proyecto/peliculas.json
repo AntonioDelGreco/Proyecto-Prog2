@@ -1,294 +1,276 @@
 [
     {
-        "id":"1",
-        "nombre":"Contratiempo",
-        "anio":2017,
-        "fecha_estreno":"10 de agosto",
-        "director":"Oriol Paulo",
-        "img":"https://pics.filmaffinity.com/Contratiempo-621094614-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"La vida del exitoso empresario Adrián Doria se vuelve una pesadilla cuando una mañana se despierta en una habitación de hotel junto al cadáver de su amante. Él está convencido de su inocencia, pero las pruebas demuestran lo contrario. Después de que su esposa lo abandone, Adrián contrata los servicios de Virginia Goodman, la mejor preparadora de testigos del país. Asesora y cliente deberán trabajar para encontrar la manera de demostrar la inocencia de Adrián."
+        "id": "1",
+        "nombre": "Contratiempo",
+        "anio": 2017,
+        "fecha_estreno": "10 de agosto",
+        "director": "Oriol Paulo",
+        "img": "https://pics.filmaffinity.com/Contratiempo-621094614-large.jpg",
+        "comentarios": [],
+        "sinopsis": "La vida del exitoso empresario Adri\u00e1n Doria se vuelve una pesadilla cuando una ma\u00f1ana se despierta en una habitaci\u00f3n de hotel junto al cad\u00e1ver de su amante. \u00c9l est\u00e1 convencido de su inocencia, pero las pruebas demuestran lo contrario. Despu\u00e9s de que su esposa lo abandone, Adri\u00e1n contrata los servicios de Virginia Goodman, la mejor preparadora de testigos del pa\u00eds. Asesora y cliente deber\u00e1n trabajar para encontrar la manera de demostrar la inocencia de Adri\u00e1n."
     },
     {
-        "id":"2",
-        "nombre":"Annabelle 4",
-        "anio":2024,
-        "fecha_estreno":"Comienzos de 2024",
-        "director":"Gary Dauberman",
-        "img":"https://www.cuandopasa.com/pic/v/000/100/v0000102695cih.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Su trama gira sobre la casa de los Warren, donde la muñeca, que sirve como un conducto para un malvado espíritu, va tras Judy, la hija de Ed y Lorraine Warren, para vengarse de los demonólogos, una vez que es liberada por la negligencia de una de las niñeras de la pequeña."
+        "id": "2",
+        "nombre": "Annabelle 4",
+        "anio": 2024,
+        "fecha_estreno": "Comienzos de 2024",
+        "director": "Gary Dauberman",
+        "img": "https://www.cuandopasa.com/pic/v/000/100/v0000102695cih.jpg",
+        "comentarios": [],
+        "sinopsis": "Su trama gira sobre la casa de los Warren, donde la mu\u00f1eca, que sirve como un conducto para un malvado esp\u00edritu, va tras Judy, la hija de Ed y Lorraine Warren, para vengarse de los demon\u00f3logos, una vez que es liberada por la negligencia de una de las ni\u00f1eras de la peque\u00f1a."
     },
     {
-        "id":"3",
-        "nombre":"Fast & Furious 11",
-        "anio":2024,
-        "fecha_estreno":"Mes de febrero de 2024",
-        "director":"Justin Lin",
-        "img":"https://elsol-compress-release.s3-accelerate.amazonaws.com/images/large/1603280047273Fast-furious.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Esta nueva y última película sobre la popular saga de carreras ilegales y coches tuneados, es el broche final de la franquicia. Justin Lin es el encargado de dirigir este largometraje, que repite como realizador de Fast & Furious tras haberse encargado de la tercera, cuarta, quinta y sexta entregas."
+        "id": "3",
+        "nombre": "Fast & Furious 11",
+        "anio": 2024,
+        "fecha_estreno": "Mes de febrero de 2024",
+        "director": "Justin Lin",
+        "img": "https://elsol-compress-release.s3-accelerate.amazonaws.com/images/large/1603280047273Fast-furious.jpg",
+        "comentarios": [],
+        "sinopsis": "Esta nueva y \u00faltima pel\u00edcula sobre la popular saga de carreras ilegales y coches tuneados, es el broche final de la franquicia. Justin Lin es el encargado de dirigir este largometraje, que repite como realizador de Fast & Furious tras haberse encargado de la tercera, cuarta, quinta y sexta entregas."
     },
     {
-        "id":"4",
-        "nombre":"Cómo Entrenar a tu Dragón 4",
-        "anio":2022,
-        "fecha_estreno":"Comienzos de 2024",
-        "director":"Chris Sanders, Dean DeBlois",
-        "img":"https://i.ytimg.com/vi/d_DPO9RJfdo/maxresdefault.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Pronto, un grupo de niños inadaptados, llevados al sitio por sus padres, descubre la verdad sobre los dragones y dónde se han estado escondiendo, un secreto que deben guardar para sí mismos para proteger lo que han descubierto."
+        "id": "4",
+        "nombre": "C\u00f3mo Entrenar a tu Drag\u00f3n 4",
+        "anio": 2022,
+        "fecha_estreno": "Comienzos de 2024",
+        "director": "Chris Sanders, Dean DeBlois",
+        "img": "https://i.ytimg.com/vi/d_DPO9RJfdo/maxresdefault.jpg",
+        "comentarios": [],
+        "sinopsis": "Pronto, un grupo de ni\u00f1os inadaptados, llevados al sitio por sus padres, descubre la verdad sobre los dragones y d\u00f3nde se han estado escondiendo, un secreto que deben guardar para s\u00ed mismos para proteger lo que han descubierto."
     },
     {
-        "id":"5",
-        "nombre":"Dream House",
-        "anio":2011,
-        "fecha_estreno":"13 de octubre",
-        "director":"Jim Sheridan",
-        "img":"https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/63112/63112_800x1183.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"El publicista Will Atenton deja un lucrativo trabajo en Nueva York para mudarse con su esposa, Libby, y sus hijas a una pintoresca ciudad de Nueva Inglaterra. Sin embargo, mientras se adaptan a su casa, los Atenton descubren que una mujer y sus hijas fueron asesinadas ahí, y el marido sobreviviente es el principal sospechoso. Con la ayuda de una vecina, cercana a la familia asesinada, Will empieza a develar una verdad aterradora."
+        "id": "5",
+        "nombre": "Dream House",
+        "anio": 2011,
+        "fecha_estreno": "13 de octubre",
+        "director": "Jim Sheridan",
+        "img": "https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/63112/63112_800x1183.jpg",
+        "comentarios": [],
+        "sinopsis": "El publicista Will Atenton deja un lucrativo trabajo en Nueva York para mudarse con su esposa, Libby, y sus hijas a una pintoresca ciudad de Nueva Inglaterra. Sin embargo, mientras se adaptan a su casa, los Atenton descubren que una mujer y sus hijas fueron asesinadas ah\u00ed, y el marido sobreviviente es el principal sospechoso. Con la ayuda de una vecina, cercana a la familia asesinada, Will empieza a develar una verdad aterradora."
     },
     {
-        "id":"6",
-        "nombre":"Capitán América: Civil War",
-        "anio":2016,
-        "fecha_estreno":"5 de mayo",
-        "director":"Joe Russo, Anthony Russo",
-        "img":"https://es.web.img3.acsta.net/pictures/16/03/14/17/21/324829.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Mientras intentan detener a Rumlow en Lagos, Capitán América, Falcon, Viuda Negra y Bruja Escarlata se ven obligados a realizar una intervención para evitar el robo de una muestra letal en el Instituto de Enfermedades Infecciosas."
+        "id": "6",
+        "nombre": "Capit\u00e1n Am\u00e9rica: Civil War",
+        "anio": 2016,
+        "fecha_estreno": "5 de mayo",
+        "director": "Joe Russo, Anthony Russo",
+        "img": "https://es.web.img3.acsta.net/pictures/16/03/14/17/21/324829.jpg",
+        "comentarios": [],
+        "sinopsis": "Mientras intentan detener a Rumlow en Lagos, Capit\u00e1n Am\u00e9rica, Falcon, Viuda Negra y Bruja Escarlata se ven obligados a realizar una intervenci\u00f3n para evitar el robo de una muestra letal en el Instituto de Enfermedades Infecciosas."
     },
     {
-        "id":"7",
-        "nombre":"Hasta el último hombre",
-        "anio":2016,
-        "fecha_estreno":"16 de octubre",
-        "director":"Mel Gibson",
-        "img":"https://pics.filmaffinity.com/Hasta_el_ltimo_hombre-205606610-large.jpg",
-        "comentarios":[
+        "id": "7",
+        "nombre": "Hasta el \u00faltimo hombre",
+        "anio": 2016,
+        "fecha_estreno": "16 de octubre",
+        "director": "Mel Gibson",
+        "img": "https://pics.filmaffinity.com/Hasta_el_ltimo_hombre-205606610-large.jpg",
+        "comentarios": [
             {
-                "id":"2",
-                "comentario":"Estaba muy buena!"
+                "id": "2",
+                "comentario": "Estaba muy buena!"
             }
         ],
-        "sinopsis":"Esta es la historia de Desmond T. Doss, un hombre contrario a la violencia que combatió como médico en la Segunda Guerra Mundial sin portar un arma. No disparó ni una bala, pero salvó a 75 personas de la muerte en la batalla de la isla de Okinawa. Gracias a su coraje, pasó de ser el objeto de las burlas de sus compañeros a ser reconocido por su enorme valía con la entrega de la Medalla de Honor del Congreso, otorgada por primera vez a un objetor de conciencia."
+        "sinopsis": "Esta es la historia de Desmond T. Doss, un hombre contrario a la violencia que combati\u00f3 como m\u00e9dico en la Segunda Guerra Mundial sin portar un arma. No dispar\u00f3 ni una bala, pero salv\u00f3 a 75 personas de la muerte en la batalla de la isla de Okinawa. Gracias a su coraje, pas\u00f3 de ser el objeto de las burlas de sus compa\u00f1eros a ser reconocido por su enorme val\u00eda con la entrega de la Medalla de Honor del Congreso, otorgada por primera vez a un objetor de conciencia."
     },
     {
-        "id":"8",
-        "nombre":"Bones and All",
-        "anio":2022,
-        "fecha_estreno":"25 de noviembre",
-        "director":"Luca Guadagnino",
-        "img":"https://es.web.img3.acsta.net/c_310_420/pictures/22/10/25/11/36/5739431.jpg",
-        "comentarios":[
+        "id": "8",
+        "nombre": "Bones and All",
+        "anio": 2022,
+        "fecha_estreno": "25 de noviembre",
+        "director": "Luca Guadagnino",
+        "img": "https://es.web.img3.acsta.net/c_310_420/pictures/22/10/25/11/36/5739431.jpg",
+        "comentarios": [
             {
-            "id":"1",
-            "comentario":"comentario de pepito con id de usuario 1"
+                "id": "1",
+                "comentario": "comentario de pepito con id de usuario 1"
             }
         ],
-        "sinopsis":"El amor florece entre una joven marginada de la sociedad y un vagabundo sin derechos cuando se embarcan en una odisea de 3.000 millas a través de las carreteras secundarias de América."
+        "sinopsis": "El amor florece entre una joven marginada de la sociedad y un vagabundo sin derechos cuando se embarcan en una odisea de 3.000 millas a trav\u00e9s de las carreteras secundarias de Am\u00e9rica."
     },
     {
-        "id":"9",
-        "nombre":"Puñales por la espalda 2",
-        "anio":2022,
-        "fecha_estreno":"23 de diciembre",
-        "director":"Rian Johnson",
-        "img":"https://www.lahiguera.net/cinemania/pelicula/9218/punales_por_la_espalda-cartel-9156.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"El multimillonario tecnológico Miles Bron invita a sus amigos a una escapada a su isla griega privada. Cuando alguien aparece muerto, el detective Benoit Blanc se hace cargo del caso."
+        "id": "9",
+        "nombre": "Pu\u00f1ales por la espalda 2",
+        "anio": 2022,
+        "fecha_estreno": "23 de diciembre",
+        "director": "Rian Johnson",
+        "img": "https://www.lahiguera.net/cinemania/pelicula/9218/punales_por_la_espalda-cartel-9156.jpg",
+        "comentarios": [],
+        "sinopsis": "El multimillonario tecnol\u00f3gico Miles Bron invita a sus amigos a una escapada a su isla griega privada. Cuando alguien aparece muerto, el detective Benoit Blanc se hace cargo del caso."
     },
     {
-        "id":"10",
-        "nombre":"Black Panther: Wakanda Forever",
-        "anio":2022,
-        "fecha_estreno":"11 de noviembre",
-        "director":"Ryan Coogler",
-        "img":"https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/07/Black-Panther-Wakanda-Forever-Afiche.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Una secuela que seguirá explorando el incomparable mundo de Wakanda y todos los ricos y variados personajes presentados en la película de 2018."
+        "id": "10",
+        "nombre": "Black Panther: Wakanda Forever",
+        "anio": 2022,
+        "fecha_estreno": "11 de noviembre",
+        "director": "Ryan Coogler",
+        "img": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/07/Black-Panther-Wakanda-Forever-Afiche.jpg",
+        "comentarios": [],
+        "sinopsis": "Una secuela que seguir\u00e1 explorando el incomparable mundo de Wakanda y todos los ricos y variados personajes presentados en la pel\u00edcula de 2018."
     },
     {
-        "id":"11",
-        "nombre":"As bestas",
-        "anio":2022,
-        "fecha_estreno":"11 de noviembre",
-        "director":"Rodrigo Sorogoyen",
-        "img":"https://pics.filmaffinity.com/As_bestas-275688233-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Una pareja francesa de mediana edad llega a vivir a un pueblo gallego en busca de una mayor cercanía con la naturaleza. Su presencia, sin embargo, despierta la hostilidad de dos lugareños."
+        "id": "11",
+        "nombre": "As bestas",
+        "anio": 2022,
+        "fecha_estreno": "11 de noviembre",
+        "director": "Rodrigo Sorogoyen",
+        "img": "https://pics.filmaffinity.com/As_bestas-275688233-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Una pareja francesa de mediana edad llega a vivir a un pueblo gallego en busca de una mayor cercan\u00eda con la naturaleza. Su presencia, sin embargo, despierta la hostilidad de dos lugare\u00f1os."
     },
     {
-        "id":"12",
-        "nombre":"El agua",
-        "anio":2022,
-        "fecha_estreno":"28 de octubre",
-        "director":"Elena López Riera",
-        "img":"https://pics.filmaffinity.com/El_agua-949205065-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Ana tiene 17 años; vive con su madre y su abuela en Orihuela. Sus días transcurren entre amigos, el primer amor, el trabajo en el bar, el temor a las riadas y unas ansias indisimuladas de escapar y buscar un horizonte más amplio."
+        "id": "12",
+        "nombre": "El agua",
+        "anio": 2022,
+        "fecha_estreno": "28 de octubre",
+        "director": "Elena L\u00f3pez Riera",
+        "img": "https://pics.filmaffinity.com/El_agua-949205065-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Ana tiene 17 a\u00f1os; vive con su madre y su abuela en Orihuela. Sus d\u00edas transcurren entre amigos, el primer amor, el trabajo en el bar, el temor a las riadas y unas ansias indisimuladas de escapar y buscar un horizonte m\u00e1s amplio."
     },
     {
-        "id":"13",
-        "nombre":"Amsterdam",
-        "anio":2022,
-        "fecha_estreno":"28 de octubre",
-        "director":"David Owen Russell",
-        "img":"https://pics.filmaffinity.com/msterdam-212094748-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"En la década de 1930, tres amigos que presencian un asesinato se convierten en sospechosos del mismo. La investigación que emprenden los lleva a descubrir una de las conspiraciones más asombrosas de la historia estadounidense."
+        "id": "13",
+        "nombre": "Amsterdam",
+        "anio": 2022,
+        "fecha_estreno": "28 de octubre",
+        "director": "David Owen Russell",
+        "img": "https://pics.filmaffinity.com/msterdam-212094748-large.jpg",
+        "comentarios": [],
+        "sinopsis": "En la d\u00e9cada de 1930, tres amigos que presencian un asesinato se convierten en sospechosos del mismo. La investigaci\u00f3n que emprenden los lleva a descubrir una de las conspiraciones m\u00e1s asombrosas de la historia estadounidense."
     },
     {
-        "id":"14",
-        "nombre":"El cuarto pasajero",
-        "anio":2022,
-        "fecha_estreno":"28 de octubre",
-        "director":"Álex de la Iglesia",
-        "img":"https://pics.filmaffinity.com/El_cuarto_pasajero-401262495-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Julián (Alberto San Juan), un divorciado de 50 años con problemas económicos, recurre a una aplicación para compartir su coche con desconocidos y, en especial, con alguien que ya no lo es tanto: Lorena (Blanca Suárez), una joven que viaja a menudo a Madrid."
+        "id": "14",
+        "nombre": "El cuarto pasajero",
+        "anio": 2022,
+        "fecha_estreno": "28 de octubre",
+        "director": "\u00c1lex de la Iglesia",
+        "img": "https://pics.filmaffinity.com/El_cuarto_pasajero-401262495-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Juli\u00e1n (Alberto San Juan), un divorciado de 50 a\u00f1os con problemas econ\u00f3micos, recurre a una aplicaci\u00f3n para compartir su coche con desconocidos y, en especial, con alguien que ya no lo es tanto: Lorena (Blanca Su\u00e1rez), una joven que viaja a menudo a Madrid."
     },
     {
-        "id":"15",
-        "nombre":"Black Adam",
-        "anio":2022,
-        "fecha_estreno":"21 de octubre",
-        "director":"Jaume Collet-Serra",
-        "img":"https://es.web.img2.acsta.net/pictures/22/10/07/16/48/1142280.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"La cinta cuenta la historia de Teth Adam, un supervillano y antihéroe ficticio, que tiene poderes gracias a los dioses; sin embargo, debido a que los utilizó de forma inadecuada fue encarcelado y debido a ello se convierte en Black Adam."
+        "id": "15",
+        "nombre": "Black Adam",
+        "anio": 2022,
+        "fecha_estreno": "21 de octubre",
+        "director": "Jaume Collet-Serra",
+        "img": "https://es.web.img2.acsta.net/pictures/22/10/07/16/48/1142280.jpg",
+        "comentarios": [],
+        "sinopsis": "La cinta cuenta la historia de Teth Adam, un supervillano y antih\u00e9roe ficticio, que tiene poderes gracias a los dioses; sin embargo, debido a que los utiliz\u00f3 de forma inadecuada fue encarcelado y debido a ello se convierte en Black Adam."
     },
     {
-        "id":"16",
-        "nombre":"Un año, una noche",
-        "anio":2022,
-        "fecha_estreno":"21 de octubre",
-        "director":"Isaki Lacuesta",
-        "img":"https://pics.filmaffinity.com/Un_a_o_una_noche-479171405-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Ramón y Céline son una joven pareja que se encuentra en el local Bataclan de París la noche del 13 de noviembre de 2015. Durante el asalto terrorista, ambos logran, cada uno por su lado, entrar en el camerino de los músicos y refugiarse allí. Al salir ya no son los mismos."
+        "id": "16",
+        "nombre": "Un a\u00f1o, una noche",
+        "anio": 2022,
+        "fecha_estreno": "21 de octubre",
+        "director": "Isaki Lacuesta",
+        "img": "https://pics.filmaffinity.com/Un_a_o_una_noche-479171405-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Ram\u00f3n y C\u00e9line son una joven pareja que se encuentra en el local Bataclan de Par\u00eds la noche del 13 de noviembre de 2015. Durante el asalto terrorista, ambos logran, cada uno por su lado, entrar en el camerino de los m\u00fasicos y refugiarse all\u00ed. Al salir ya no son los mismos."
     },
     {
-        "id":"17",
-        "nombre":"Peter von Kant",
-        "anio":2022,
-        "fecha_estreno":"14 de octubre",
-        "director":"Francois Ozon",
-        "img":"https://pics.filmaffinity.com/Peter_von_Kant-839316990-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Peter Von Kant, un famoso director de éxito, vive con su asistente Karl, al que maltrata y humilla. Gracias a la gran actriz Sidonie, conoce y se enamora de Amir, un apuesto joven de origen modesto, a quien ofrece compartir su casa y apoyarle para entrar en el mundo del cine."
+        "id": "17",
+        "nombre": "Peter von Kant",
+        "anio": 2022,
+        "fecha_estreno": "14 de octubre",
+        "director": "Francois Ozon",
+        "img": "https://pics.filmaffinity.com/Peter_von_Kant-839316990-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Peter Von Kant, un famoso director de \u00e9xito, vive con su asistente Karl, al que maltrata y humilla. Gracias a la gran actriz Sidonie, conoce y se enamora de Amir, un apuesto joven de origen modesto, a quien ofrece compartir su casa y apoyarle para entrar en el mundo del cine."
     },
     {
-        "id":"18",
-        "nombre":"Halloween: El final",
-        "anio":2022,
-        "fecha_estreno":"14 de octubre",
-        "director":"David Gordon Green",
-        "img":"https://es.web.img3.acsta.net/pictures/22/09/27/18/12/3710392.jpg",
-        "comentarios":[
+        "id": "18",
+        "nombre": "Halloween: El final",
+        "anio": 2022,
+        "fecha_estreno": "14 de octubre",
+        "director": "David Gordon Green",
+        "img": "https://es.web.img3.acsta.net/pictures/22/09/27/18/12/3710392.jpg",
+        "comentarios": [
             {
-                "id":"2",
-                "comentario":"Estaba muy buena!"
+                "id": "2",
+                "comentario": "Estaba muy buena!"
             }
         ],
-        "sinopsis":"Cuatro años después de la desaparición de Michael Myers, el joven Corey lo encuentra maltrecho en las alcantarillas. Poco a poco, se establece un extraño vínculo entre estos dos personajes unidos por la venganza y la locura."
+        "sinopsis": "Cuatro a\u00f1os despu\u00e9s de la desaparici\u00f3n de Michael Myers, el joven Corey lo encuentra maltrecho en las alcantarillas. Poco a poco, se establece un extra\u00f1o v\u00ednculo entre estos dos personajes unidos por la venganza y la locura."
     },
     {
-        "id":"19",
-        "nombre":"Cerdita",
-        "anio":2022,
-        "fecha_estreno":"14 de octubre",
-        "director":"Carlota Martínez Pereda, Carlota Pereda",
-        "img":"https://pics.filmaffinity.com/Cerdita-480760611-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Sara es una adolescente con sobrepeso que es testigo de cómo un desconocido secuestra a un grupo de chicas que la acosan habitualmente. Cuando la policía comienza a hacer preguntas, Sara decide mantener silencio."
+        "id": "19",
+        "nombre": "Cerdita",
+        "anio": 2022,
+        "fecha_estreno": "14 de octubre",
+        "director": "Carlota Mart\u00ednez Pereda, Carlota Pereda",
+        "img": "https://pics.filmaffinity.com/Cerdita-480760611-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Sara es una adolescente con sobrepeso que es testigo de c\u00f3mo un desconocido secuestra a un grupo de chicas que la acosan habitualmente. Cuando la polic\u00eda comienza a hacer preguntas, Sara decide mantener silencio."
     },
     {
-        "id":"20",
-        "nombre":"Girasoles silvestres",
-        "anio":2022,
-        "fecha_estreno":"14 de octubre",
-        "director":"Jaime Rosales",
-        "img":"https://pics.filmaffinity.com/Girasoles_silvestres-279066298-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Julia es una joven de 22 años y madre de dos niños que se enamora de Óscar, con el que inicia una relación intensa y tortuosa. Julia empieza a dudar sobre la conveniencia de Óscar como modelo masculino para sus hijos. Un incidente dará lugar a una huida hacia delante en busca de un futuro mejor."
+        "id": "20",
+        "nombre": "Girasoles silvestres",
+        "anio": 2022,
+        "fecha_estreno": "14 de octubre",
+        "director": "Jaime Rosales",
+        "img": "https://pics.filmaffinity.com/Girasoles_silvestres-279066298-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Julia es una joven de 22 a\u00f1os y madre de dos ni\u00f1os que se enamora de \u00d3scar, con el que inicia una relaci\u00f3n intensa y tortuosa. Julia empieza a dudar sobre la conveniencia de \u00d3scar como modelo masculino para sus hijos. Un incidente dar\u00e1 lugar a una huida hacia delante en busca de un futuro mejor."
     },
     {
-        "id":"21",
-        "nombre":"Los renglones torcidos de Dios",
-        "anio":2022,
-        "fecha_estreno":"7 de octubre",
-        "director":"Oriol Paulo",
-        "img":"https://pics.filmaffinity.com/Los_renglones_torcidos_de_Dios-670212742-large.jpg",
-        "comentarios":[
-        ],
-        "sinopsis":"Alice, investigadora privada, ingresa en un hospital psiquiátrico simulando una paranoia. Su objetivo es recabar pruebas del caso en el que trabaja: la muerte de un interno en circunstancias poco claras."
+        "id": "21",
+        "nombre": "Los renglones torcidos de Dios",
+        "anio": 2022,
+        "fecha_estreno": "7 de octubre",
+        "director": "Oriol Paulo",
+        "img": "https://pics.filmaffinity.com/Los_renglones_torcidos_de_Dios-670212742-large.jpg",
+        "comentarios": [],
+        "sinopsis": "Alice, investigadora privada, ingresa en un hospital psiqui\u00e1trico simulando una paranoia. Su objetivo es recabar pruebas del caso en el que trabaja: la muerte de un interno en circunstancias poco claras."
     },
     {
-        "id":"22",
-        "nombre":"En los márgenes",
-        "anio":2022,
-        "fecha_estreno":"7 de octubre",
-        "director":"Juan Diego Botto",
-        "img":"https://pics.filmaffinity.com/En_los_m_rgenes-722944196-large.jpg",
-        "comentarios":[
+        "id": "22",
+        "nombre": "En los m\u00e1rgenes",
+        "anio": 2022,
+        "fecha_estreno": "7 de octubre",
+        "director": "Juan Diego Botto",
+        "img": "https://pics.filmaffinity.com/En_los_m_rgenes-722944196-large.jpg",
+        "comentarios": [
             {
-                "id":"3",
-                "comentario":"Estaba muy buena!"
+                "id": "3",
+                "comentario": "Estaba muy buena!"
             }
         ],
-        "sinopsis":"Rafa, un abogado laboral, pasa un día infernal intentando ayudar a un inmigrante que va a perder la custodia de su hija y una mujer a la que van a desahuciar. Sus historias se entrelazan con la de Germán, un empresario arruinado."
+        "sinopsis": "Rafa, un abogado laboral, pasa un d\u00eda infernal intentando ayudar a un inmigrante que va a perder la custodia de su hija y una mujer a la que van a desahuciar. Sus historias se entrelazan con la de Germ\u00e1n, un empresario arruinado."
     },
     {
-        "id":"23",
-        "nombre":"Argentina 1985",
-        "anio":2022,
-        "fecha_estreno":"29 de septiembre",
-        "director":"Santiago Mitre",
-        "img":"http://cineargentinohoy.com.ar/wp-content/uploads/2022/09/ARGENTINA-1985-PV-esp-2-scaled.jpg",
-        "comentarios":[
+        "id": "23",
+        "nombre": "Argentina 1985",
+        "anio": 2022,
+        "fecha_estreno": "29 de septiembre",
+        "director": "Santiago Mitre",
+        "img": "http://cineargentinohoy.com.ar/wp-content/uploads/2022/09/ARGENTINA-1985-PV-esp-2-scaled.jpg",
+        "comentarios": [
             {
-                "id":"2",
-                "comentario":"Estaba muy buena!"
+                "id": "2",
+                "comentario": "Estaba muy buena!"
             },
             {
-                "id":"1",
-                "comentario":"Estaba muy buena!"
+                "id": "1",
+                "comentario": "Estaba muy buena!"
             }
         ],
-        "sinopsis":"Durante la década de 1980, un grupo de abogados investiga y lleva a juicio a los responsables de la dictadura cívico-militar argentina."
+        "sinopsis": "Durante la d\u00e9cada de 1980, un grupo de abogados investiga y lleva a juicio a los responsables de la dictadura c\u00edvico-militar argentina."
     },
     {
-        "id":"24",
-        "nombre":"Modelo 77",
-        "anio":2022,
-        "fecha_estreno":"23 de septiembre",
-        "director":"Alberto Rodríguez Librero",
-        "img":"https://pics.filmaffinity.com/Modelo_77-740028363-large.jpg",
-        "comentarios":[
+        "id": "24",
+        "nombre": "Modelo 77",
+        "anio": 2022,
+        "fecha_estreno": "23 de septiembre",
+        "director": "Alberto Rodr\u00edguez Librero",
+        "img": "https://pics.filmaffinity.com/Modelo_77-740028363-large.jpg",
+        "comentarios": [
             {
-                "id":"3",
-                "comentario":"Estaba horrible!"
+                "id": "3",
+                "comentario": "Estaba horrible!"
             }
         ],
-        "sinopsis":"Un joven contable, a la espera de ser juzgado en 1977 por malversación de fondos con una posible condena de 20 años, se une a un grupo de presos que exigen una amnistía."
+        "sinopsis": "Un joven contable, a la espera de ser juzgado en 1977 por malversaci\u00f3n de fondos con una posible condena de 20 a\u00f1os, se une a un grupo de presos que exigen una amnist\u00eda."
     }
 ]

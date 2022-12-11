@@ -44,7 +44,12 @@
                       {% else %}
                       {{user}}
                       <a href="{{url_for('logout')}}">Cerrar sesion</a>
+                      <a href="{{url_for('agregarPelicula')}}">Agregar Pelicula</a>
                       {% endif %}
+                    </div>
+                    <div>
+                      {% block mod %}
+                      {% endblock %}
                     </div>
                 </nav>
             </header>
@@ -58,8 +63,9 @@
                             {% if nombre_peliculas|length > 0 %}
                                 {% for i in range(nombre_peliculas|length) %}
                                     <div id="{{i}}">
+                                      <a href="/pelicula/{{ nombre_peliculas[i] }}">
                                         <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px"> 
-                                        <a name="{{ nombre_peliculas[i] }}" href="/pelicula">{{ nombre_peliculas[i] }}</a>
+                                      </a>
                                         <p>{{ nombre_peliculas[i] }}</p>
                                     </div>
                                 {% endfor %}
