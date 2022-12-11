@@ -14,7 +14,7 @@
             <header>
                 <nav>
                     <div>
-                        <form method="get" action="peliculas">
+                        <form method="get" action="/peliculas">
                             <button class="boton-menu"> 
                                 <p>Inicio</p>
                             </button>
@@ -25,7 +25,8 @@
                         <form action="/buscar" method="POST" class="formulario_buscar">
                             <!-- <label for="Buscador">Buscar</label> -->
 
-                            <input type="text" name="info_buscar" placeholder=" Que desea buscar?" class="input_buscador">
+                            <input type="text" name="info_buscar" placeholder=" Que desea buscar?" 
+                            class="input_buscador" required>
                             <!-- uso </br> si quiero separar el boton del ingreso de información a buscar.-->
                             <!--Name="..." es la info que recibe Flask en python.-->
 
