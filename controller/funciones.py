@@ -1,4 +1,9 @@
 import json
+from flask import session
+
+generos = ["accion","aventuras","ciencia ficcion","comedia","documental","drama","fantasia","musical","suspenso","terror","cine mudo","cine 2d","cine 3d","animacion","religiosas","futuristas","policiacas","crimen","belicas","historicas","deportivas","western"]
+
+directores = ['martin scorsese', 'billy wilder', 'steven spielberg', 'federico fellini', 'roman polanski', 'michael haneke', 'francis ford coppola', 'alfred hitchcock', 'terry gilliam', 'stanley kubrick', 'hayao miyazaki', 'isao takahata', 'woody allen', 'george cuckor', 'quentin tarantino', 'darren aronofsky', 'charles chaplin', 'pedro almodovar', 'm. night shyamalan', 'george a. romero']
 
 def moviesFiles():
   with open('./Archivos_JSON_Proyecto/peliculas.json', encoding='utf-8') as archivo_json1:
@@ -25,3 +30,16 @@ def imgPeliculas():
     if (len(img)<10) and (i["img"] not in img):
       img.append(i["img"])
   return img
+
+def agregarPeliculas(pelicula):
+  movies = moviesFiles()
+  movies.append(pelicula)
+  with open('./Archivos_JSON_Proyecto/peliculas.json', 'w') as a:
+    json.dump(movies, a, indent=4)
+
+def verify():
+  if 'username' in session:
+    user = session['username']
+  else:
+    user = ""
+  return user

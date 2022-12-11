@@ -1,11 +1,10 @@
 from flask import Flask,request,Response,render_template,redirect,url_for, session
 from http import HTTPStatus
-import json
-from controller.funciones import nombresPeliculas, imgPeliculas, usersFiles, moviesFiles
+import controller.funciones
+import secrets
 
-usuario_privado=""
 app = Flask(__name__)
-app.secret_key = 'secretKey1234567890'
+app.secret_key = 'c13d6b2d33bc0b22412c0c723fe5acdd2fb3c941052ce7aed61be9e6cb457d1e' # python -c 'import secrets; print(secrets.token_hex())'
 
 @app.route("/")
 def retornar():
@@ -19,13 +18,13 @@ def index():
     user = session['username']
   else:
     user = ""
-  return Response (render_template("peliculas.html", user=user, nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
+  return Response (render_template("peliculas.html", user=user, nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
 
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
 def buscar(info):
     lista_encontradas=[]
-    peliculas = moviesFiles()
+    peliculas = controller.funciones.moviesFiles()
     for i in peliculas[::-1]:
         #print(i.values())
         for j in i.values():
@@ -62,14 +61,14 @@ def login():
       "username": request.form['username'],
       "password": request.form['password']
     }
-    users = usersFiles()
+    users = controller.funciones.usersFiles()
     for user in users:
       if dataUser["username"] == user["usuario"] and dataUser["password"] == user["contrasenia"]:
         session["username"] = dataUser['username']
         user = dataUser['username']
       else:
         user = ""
-    return Response (render_template("peliculas.html", user=user, nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
+    return Response (render_template("peliculas.html", user=user, nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
   return render_template('perfil.html')
 
 
@@ -78,17 +77,35 @@ def logout():
   session.pop('username', None)
   return redirect(url_for('index'))
 
-# COMENTARIOS
+# UNA Peli
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
   
-# @app.route('/pelicula')
-# def peli():
-#   url_for('pelicula', nombresPeli=request.args)
+@app.route('/pelicula/<nombrePelicula>')
+def pelicula(nombrePelicula):
+  pelis = controller.funciones.moviesFiles()
+  for peli in pelis:
+    if peli["nombre"] == nombrePelicula:
+      unaPeli = peli
+      return render_template('comentarios.html', unaPeli=unaPeli, user=controller.funciones.verify())
   
-# @app.route('/pelicula/<string:nombrePelicula>')
-# def pelicula(nombrePelicula):
-#   print(request.args)
-
+# Agregar Pelicula
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+@app.route('/pelicula/agregar', methods=['GET', 'POST'])
+def agregarPelicula():
+  if request.method == 'POST':
+    pelicula = {
+        "id":secrets.token_hex(),
+        "nombre":request.form['nombre'],
+        "anio":request.form['anio'],
+        "fecha_estreno":request.form['estreno'],
+        "director":request.form['director'],
+        "genero":request.form['genero'],
+        "img":request.form['imagen'],
+        "comentarios":[],
+        "sinopsis":request.form['sinopsis']
+    }
+    controller.funciones.agregarPeliculas(pelicula)
+  return render_template('agregarPeli.html', directores=controller.funciones.directores, generos=controller.funciones.generos)
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 if __name__ == "__main__":

@@ -1,0 +1,43 @@
+{% extends './peliculas.html' %}
+
+{% block content %}
+<form method="POST">
+  <div>
+    <label for="nombre">Nombre de la pelicula:</label>
+    <input type="text" name="nombre" required autofocus>
+  </div>
+  <div>
+    <label for="imagen">Imagen:</label>
+    <input type="text" name="imagen" required>
+  </div>
+  <div>
+    <label for="anio">Anio:</label>
+    <input type="text" name="anio">
+  </div>
+  <div>
+    <label for="estreno">Fecha de estreno:</label>
+    <input type="text" name="estreno" placeholder="1 de Septiembre" required>
+  </div>
+  <div>
+    <label for="estreno">Sinopsis</label>
+    <input type="text" name="sinopsis" required>
+  </div>
+  <div>
+    <label for="nombre">Directores disponibles</label>
+    <select name="director" required>
+      {% for director in directores %}
+        <option value="{{director}}">{{director}}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="nombre">Generos disponibles</label>
+  <select name="genero" required>
+    {% for genero in generos %}
+      <option value="{{genero}}">{{genero}}</option>
+    {% endfor %}
+  </select>
+  </div>
+  <input type="submit">
+</form>
+{% endblock %}
