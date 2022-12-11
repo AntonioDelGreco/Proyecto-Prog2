@@ -2,6 +2,8 @@ from flask import Flask,request,Response,render_template,redirect,url_for, sessi
 from http import HTTPStatus
 import json
 
+usuario_privado=False
+
 app = Flask(__name__)
 app.secret_key = 'secretKey1234567890'
 
@@ -38,8 +40,12 @@ def buscar(info):
     for i in peliculas[::-1]:
         #print(i.values())
         for j in i.values():
-            if (info in str(j)) and (i not in lista_encontradas):
-                lista_encontradas.append(i)
+            if str(info).isnumeric():
+                if ((str(info) in str(j)) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
+                    lista_encontradas.append(i)
+            else:
+                if ((info in str(j)) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
+                      lista_encontradas.append(i)
 
     return Response (render_template("peliculas.html",
     nombre_peliculas=[i["nombre"] for i in lista_encontradas],
