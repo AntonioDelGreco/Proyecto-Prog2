@@ -35,16 +35,16 @@
                     </div>
 
                     <div>
+                      {% if user == "" %}
                       <a href="{{url_for('login')}}">
                         <button id="btn-perfil"> 
                           <span class="material-icons">manage_accounts</span>
                         </button>
                       </a>
-                        <!-- <form method="get" action="perfil">
-                            <button id="btn-perfil"> 
-                                <span class="material-icons">manage_accounts</span>
-                            </button>
-                        </form>  -->
+                      {% else %}
+                      {{user}}
+                      <a href="{{url_for('logout')}}">Cerrar sesion</a>
+                      {% endif %}
                     </div>
                 </nav>
             </header>

@@ -1,16 +1,11 @@
 from flask import Flask,request,Response,render_template,redirect,url_for, session
 from http import HTTPStatus
 import json
+from controller.funciones import nombresPeliculas, imgPeliculas, usersFiles, moviesFiles
 
-usuario_privado=False
-
+usuario_privado=""
 app = Flask(__name__)
 app.secret_key = 'secretKey1234567890'
-
-with open('Archivos_JSON_Proyecto/peliculas.json', encoding='utf-8') as archivo_json1:
-    peliculas = json.load(archivo_json1)
-with open('Archivos_JSON_Proyecto/usuarios.json', encoding='utf-8') as file:
-    users = json.load(file)
 
 @app.route("/")
 def retornar():
@@ -20,23 +15,13 @@ def retornar():
 @app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
 def index():
-    lista_nombres_peliculas=[]
-    lista_imagenes_peliculas=[]
-    for i in peliculas[::-1]:
-        if (len(lista_nombres_peliculas)<10) and (i["nombre"] not in lista_nombres_peliculas):
-            lista_nombres_peliculas.append(i["nombre"])
-            lista_imagenes_peliculas.append(i["img"])
-    #print(lista_nombres_peliculas)
-
-    return Response (render_template("peliculas.html",
-    nombre_peliculas=lista_nombres_peliculas,
-    imagenes_peliculas=lista_imagenes_peliculas),
-    status = HTTPStatus.OK,)
+  return Response (render_template("peliculas.html", user="", nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
 
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
 def buscar(info):
     lista_encontradas=[]
+    peliculas = moviesFiles()
     for i in peliculas[::-1]:
         #print(i.values())
         for j in i.values():
@@ -73,18 +58,18 @@ def login():
       "username": request.form['username'],
       "password": request.form['password']
     }
+    users = usersFiles()
     for user in users:
-      if dataUser["username"] in user["usuario"] and dataUser["password"] in user["contrasenia"]:
-        session['username'] = dataUser['username']
-        return Response(f'Usuario logueado correctamente, su usuario es: {session["username"]}')
-      else:
-        return Response("Usuario o contraseña incorrectos, intente de nuevo.")
+      if dataUser["username"] == user["usuario"] and dataUser["password"] == user["contrasenia"]:
+        session["username"] = dataUser['username']
+    return Response (render_template("peliculas.html", user=session["username"], nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
   return render_template('perfil.html')
+
 
 @app.route('/logout')
 def logout():
   session.pop('username', None)
-  return redirect(url_for('peliculas'))
+  return redirect(url_for('index'))
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 if __name__ == "__main__":
