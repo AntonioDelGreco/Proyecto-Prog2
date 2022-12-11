@@ -15,7 +15,11 @@ def retornar():
 @app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
 def index():
-  return Response (render_template("peliculas.html", user="", nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
+  if 'username' in session:
+    user = session['username']
+  else:
+    user = ""
+  return Response (render_template("peliculas.html", user=user, nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
 
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
@@ -33,17 +37,17 @@ def buscar(info):
                       lista_encontradas.append(i)
 
     return Response (render_template("peliculas.html",
-    nombre_peliculas=[i["nombre"] for i in lista_encontradas],
-    imagenes_peliculas=[i["img"] for i in lista_encontradas]),
-    status = HTTPStatus.OK,)
+      nombre_peliculas=[i["nombre"] for i in lista_encontradas],
+      imagenes_peliculas=[i["img"] for i in lista_encontradas]),
+      status = HTTPStatus.OK)
 
-@app.route("/buscar",methods=["POST"])
+@app.route("/buscar", methods=["POST"])
 def buscar_post():
 
     informacion=request.form["info_buscar"]
     #print(informacion)
 
-    return redirect(url_for("buscar", info=informacion,next="edit"),Response=HTTPStatus.OK) 
+    return redirect(url_for("buscar", info=informacion, next="edit"), Response=HTTPStatus.OK) 
     #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
 # LOGIN
@@ -52,7 +56,7 @@ def buscar_post():
 @app.route('/perfil', methods=['GET', 'POST'])
 def login():
   if 'username' in session:
-    return Response(f'Su usuario ya se encuentra en sesion y es {session["username"]}')
+    return redirect(url_for('index'))
   if request.method == 'POST':
     dataUser = {
       "username": request.form['username'],
@@ -62,7 +66,10 @@ def login():
     for user in users:
       if dataUser["username"] == user["usuario"] and dataUser["password"] == user["contrasenia"]:
         session["username"] = dataUser['username']
-    return Response (render_template("peliculas.html", user=session["username"], nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
+        user = dataUser['username']
+      else:
+        user = ""
+    return Response (render_template("peliculas.html", user=user, nombre_peliculas=nombresPeliculas(), imagenes_peliculas=imgPeliculas()), status = HTTPStatus.OK)
   return render_template('perfil.html')
 
 
@@ -70,6 +77,18 @@ def login():
 def logout():
   session.pop('username', None)
   return redirect(url_for('index'))
+
+# COMENTARIOS
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+  
+# @app.route('/pelicula')
+# def peli():
+#   url_for('pelicula', nombresPeli=request.args)
+  
+# @app.route('/pelicula/<string:nombrePelicula>')
+# def pelicula(nombrePelicula):
+#   print(request.args)
+
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 if __name__ == "__main__":

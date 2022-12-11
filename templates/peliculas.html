@@ -52,23 +52,24 @@
             <hr>
 
             <main>
+              {% block content %}
                 <article>
                     <div class="articulos">
-                        {% block content %}
                             {% if nombre_peliculas|length > 0 %}
                                 {% for i in range(nombre_peliculas|length) %}
                                     <div id="{{i}}">
-                                        <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px">
-                                        <p> {{ nombre_peliculas[i] }}</p>
+                                        <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px"> 
+                                        <a name="{{ nombre_peliculas[i] }}" href="/pelicula">{{ nombre_peliculas[i] }}</a>
+                                        <p>{{ nombre_peliculas[i] }}</p>
                                     </div>
                                 {% endfor %}
 
                             {% else %}
                                 <h1>No se encontró ninguna película con lo que buscó.</h1>
                             {% endif %}
-                        {% endblock %}
-                    </div>
-                </article>
+                      </div>
+                  </article>
+              {% endblock %}
             </main>
 
             <footer>
