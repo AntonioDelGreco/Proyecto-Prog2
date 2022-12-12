@@ -14,11 +14,7 @@ def retornar():
 @app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
 def index():
-  if 'username' in session:
-    user = session['username']
-  else:
-    user = ""
-  return Response (render_template("peliculas.html", user=user, nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
+  return Response (render_template("peliculas.html", user=controller.funciones.verify(), nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
 
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
@@ -42,10 +38,8 @@ def buscar(info):
 
 @app.route("/buscar", methods=["POST"])
 def buscar_post():
-
     informacion=request.form["info_buscar"]
     #print(informacion)
-
     return redirect(url_for("buscar", info=informacion, next="edit"), Response=HTTPStatus.OK) 
     #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
