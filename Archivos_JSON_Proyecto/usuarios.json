@@ -1,80 +1,73 @@
 [
     {
-        "nombre":"pepe",
-        "apellido":"guitierrez",
-        "usuario":"pepito",
-        "id":"1",
-        "peliculas_comentadas":[
+        "nombre": "pepe",
+        "apellido": "guitierrez",
+        "usuario": "pepito",
+        "id": "1",
+        "peliculas_comentadas": [
             {
-            "id":"Bones_and_All"  
+                "id": "Bones_and_All"
             },
             {
-            "id":"33333"  
+                "id": "33333"
             }
         ],
-        "contrasenia":"contraseniasecreta"
+        "contrasenia": "contraseniasecreta"
     },
     {
-        "nombre":"Mateo",
-        "apellido":"Martínez",
-        "usuario":"mateito",
-        "id":"2",
-        "peliculas_comentadas":[
+        "nombre": "Mateo",
+        "apellido": "Mart\u00ednez",
+        "usuario": "mateito",
+        "id": "2",
+        "peliculas_comentadas": [
             {
-                "id":"7" 
+                "id": "7"
             },
             {
-                "id":"18"  
+                "id": "18"
             },
             {
-                "id":"23"
+                "id": "23"
             }
         ],
-        "contrasenia":"contrasenia123"
+        "contrasenia": "contrasenia123"
     },
     {
-        "nombre":"Facha",
-        "apellido":"Facha",
-        "usuario":"elfacha",
-        "id":"3",
-        "peliculas_comentadas":[
+        "nombre": "Facha",
+        "apellido": "Facha",
+        "usuario": "elfacha",
+        "id": "3",
+        "peliculas_comentadas": [
             {
-                "id":"22"  
+                "id": "22"
             },
             {
-                "id":"24"
+                "id": "24"
             }
         ],
-        "contrasenia":"nomiresmicontrasenia"
+        "contrasenia": "nomiresmicontrasenia"
     },
     {
-        "nombre":"Matilde",
-        "apellido":"Carballo",
-        "usuario":"MatildeCarballo",
-        "id":"4",
-        "peliculas_comentadas":[
+        "nombre": "Matilde",
+        "apellido": "Carballo",
+        "usuario": "MatildeCarballo",
+        "id": "4",
+        "peliculas_comentadas": [
             {
-            "id":""  
+                "id": ""
             },
             {
-            "id":""  
+                "id": ""
             }
         ],
-        "contrasenia":"contrasenia.com"
+        "contrasenia": "contrasenia.com"
     },
     {
-        "nombre":"usuario",
-        "apellido":"prueba",
-        "usuario":"usuarioprueba",
-        "id":"5",
-        "peliculas_comentadas":[
-            {
-            "id":""  
-            },
-            {
-            "id":""  
-            }
-        ],
-        "contrasenia":"123"
+        "nombre": "usuario",
+        "apellido": "prueba",
+        "usuario": "usuarioprueba",
+        "id": "5",
+        "peliculas_comentadas": [],
+        "contrasenia": "123"
     }
 ]

@@ -101,10 +101,15 @@ def agregarPelicula():
         "director":request.form['director'],
         "genero":request.form['genero'],
         "img":request.form['imagen'],
-        "comentarios":[],
+        "comentarios":[
+          {
+            "idComent":secrets.token_hex(),
+            "opinion":request.form['opinion']
+          }
+        ],
         "sinopsis":request.form['sinopsis']
     }
-    controller.funciones.agregarPeliculas(pelicula)
+    controller.funciones.agregarPeliculas(pelicula, session['username'])
   return render_template('agregarPeli.html', directores=controller.funciones.directores, generos=controller.funciones.generos)
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 

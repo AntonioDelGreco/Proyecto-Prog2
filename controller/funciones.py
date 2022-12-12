@@ -31,11 +31,25 @@ def imgPeliculas():
       img.append(i["img"])
   return img
 
-def agregarPeliculas(pelicula):
+def agregarPeliculas(pelicula, userSession):
   movies = moviesFiles()
   movies.append(pelicula)
-  with open('./Archivos_JSON_Proyecto/peliculas.json', 'w') as a:
-    json.dump(movies, a, indent=4)
+  with open('./Archivos_JSON_Proyecto/peliculas.json', 'w') as f:
+    json.dump(movies, f, indent=4)
+    f.close()
+  for idCom in pelicula['comentarios']:
+    idComentario = idCom['idComent']
+  users = usersFiles()
+  for user in users:
+    if userSession == user['usuario']:
+      user['peliculas_comentadas'] = [{
+        "idPeli":pelicula['id'],
+        "idComentario":idComentario
+      }]
+  with open('./Archivos_JSON_Proyecto/usuarios.json', 'w') as f:
+    json.dump(users, f, indent=4)
+    f.close()
+  
 
 def verify():
   if 'username' in session:
