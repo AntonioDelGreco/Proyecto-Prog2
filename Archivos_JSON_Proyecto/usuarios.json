@@ -6,10 +6,7 @@
         "id": "1",
         "peliculas_comentadas": [
             {
-                "id": "Bones_and_All"
-            },
-            {
-                "id": "33333"
+                "id": "cc79c634b559dd8f9de744c18c3c8346a0a2dedd97fac4d001eed43fa6d36d49"
             }
         ],
         "contrasenia": "contraseniasecreta"
@@ -21,13 +18,13 @@
         "id": "2",
         "peliculas_comentadas": [
             {
-                "id": "7"
+                "id": "b004472cb1a67c5425b67ce8888c7fa170da4e2c8d5375dd68b0736e462d3ba4"
             },
             {
-                "id": "18"
+                "id": "a671dceaacce8dd159defb38aa0aa3c3807aae9f7b96461a9c77420910b4f72c"
             },
             {
-                "id": "23"
+                "id": "aef86f5811afb298bce367b7ca6b463030475a448dff53bcdbd92196cced00ab"
             }
         ],
         "contrasenia": "contrasenia123"
@@ -39,10 +36,10 @@
         "id": "3",
         "peliculas_comentadas": [
             {
-                "id": "22"
+                "id": "aef86f5811afb298bce367b7ca6b463030475a448dff53bcdbd92196cced00ab"
             },
             {
-                "id": "24"
+                "id": "70a8bfd38be350107837aa4d6cc4749e8d98ae3cdc4d7d3063fdc0361f635266"
             }
         ],
         "contrasenia": "nomiresmicontrasenia"
@@ -53,12 +50,6 @@
         "usuario": "MatildeCarballo",
         "id": "4",
         "peliculas_comentadas": [
-            {
-                "id": ""
-            },
-            {
-                "id": ""
-            }
         ],
         "contrasenia": "contrasenia.com"
     },
