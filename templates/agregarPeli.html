@@ -19,12 +19,17 @@
     <input type="text" name="estreno" placeholder="1 de Septiembre" required>
   </div>
   <div>
+    <label for="opinion">Tu opinion</label>
+    <input type="text" name="opinion" required>
+  </div>
+  <div>
     <label for="estreno">Sinopsis</label>
     <input type="text" name="sinopsis" required>
   </div>
   <div>
     <label for="nombre">Directores disponibles</label>
     <select name="director" required>
+      <option disabled selected>Director</option>
       {% for director in directores %}
         <option value="{{director}}">{{director}}</option>
       {% endfor %}
@@ -32,7 +37,8 @@
   </div>
   <div>
     <label for="nombre">Generos disponibles</label>
-  <select name="genero" required>
+    <select name="genero" required>
+      <option disabled selected>Genero</option>
     {% for genero in generos %}
       <option value="{{genero}}">{{genero}}</option>
     {% endfor %}

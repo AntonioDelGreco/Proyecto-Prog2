@@ -272,5 +272,21 @@
             }
         ],
         "sinopsis": "Un joven contable, a la espera de ser juzgado en 1977 por malversaci\u00f3n de fondos con una posible condena de 20 a\u00f1os, se une a un grupo de presos que exigen una amnist\u00eda."
+    },
+    {
+        "id": "34155dbf47a29c7e51e57846fabbd1ba98005a14f025ca531bb49a641f54c11c",
+        "nombre": "diego",
+        "anio": "2020",
+        "fecha_estreno": "1 de mayo",
+        "director": "roman polanski",
+        "genero": "suspenso",
+        "img": "url",
+        "comentarios": [
+            {
+                "idComent": "dc5c53a24945ede46b0976831681650caf5b9fae4505e91059f1860b3e9c7f05",
+                "opinion": "es una muy buena pelicula"
+            }
+        ],
+        "sinopsis": "aaaaaaaaaaaaa"
     }
 ]
