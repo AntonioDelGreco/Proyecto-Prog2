@@ -4,7 +4,7 @@
         <title>Películas Online</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../static/css/estilos_index.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/estilos_index.css')}}">
         <!-- 304 Not Modified en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. -->
     </head>
 
@@ -29,7 +29,7 @@
                             <!-- uso </br> si quiero separar el boton del ingreso de información a buscar.-->
                             <!--Name="..." es la info que recibe Flask en python.-->
 
-                            <input type="submit" value="Buscar" class="boton-menu"/>
+                            <input type="submit" value="Buscar" class="boton-menu">
                         </form>
                     </div>
 
@@ -53,8 +53,6 @@
                     </div>
                 </nav>
             </header>
-
-            <hr>
 
             <main>
               {% block content %}

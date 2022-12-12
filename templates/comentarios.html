@@ -11,16 +11,12 @@
 {% for comentario in unaPeli.comentarios%}
   <p>{{comentario.comentario}}</p>
 {% endfor %}
-
-<div class="editar">
-    <form action="/pelicula/editar/{{unaPeli.nombre}}" method="POST" class="formulario_buscar">
-        <input type="submit" value="Editar" class="boton-menu"/>
-    </form>
+<p>/pelicula/editar/{{unaPeli.nombre}}</p>
+<div>
+  <form action="/pelicula/editar/{{ unaPeli.nombre }}">
+    <button>editar</button>
+    <input type="submit">
+  </form>
+  <!-- <a href="/pelicula/editar/{{ unaPeli.nombre }}">Editar</a> -->
 </div>
-
-<form>
-  <button class="boton-menu"> 
-    <p>Eliminar</p>
-</button>
-</form>
 {% endblock %}
