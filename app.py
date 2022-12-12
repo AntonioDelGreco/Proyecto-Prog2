@@ -8,24 +8,18 @@ app.secret_key = 'c13d6b2d33bc0b22412c0c723fe5acdd2fb3c941052ce7aed61be9e6cb457d
 
 @app.route("/")
 def retornar():
-  return redirect(url_for("index"),
-  Response=HTTPStatus.OK) 
-  #Busca la funcion "index ya definida en 'app'."
+  return redirect(url_for("index"),Response=HTTPStatus.OK) #Busca la funcion "index ya definida en 'app'."
   #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
-# Index
-# ///////////////////////////////////////////////////////////////////////////////////////////////////
 @app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
 def index():
-  return Response (render_template("peliculas.html",
-  user=controller.funciones.verify(),
-  nombre_peliculas=controller.funciones.nombresPeliculas(),
-  imagenes_peliculas=controller.funciones.imgPeliculas()),
-  status = HTTPStatus.OK)
+  if 'username' in session:
+    user = session['username']
+  else:
+    user = ""
+  return Response (render_template("peliculas.html", user=user, nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
 
-# Buscador
-# ///////////////////////////////////////////////////////////////////////////////////////////////////
 @app.route("/buscar/<int:info>",methods=["GET"])
 @app.route("/buscar/<info>",methods=["GET"])
 def buscar(info):
@@ -34,23 +28,24 @@ def buscar(info):
     for i in peliculas[::-1]:
         #print(i.values())
         for j in i.values():
-            if str(info).isnumeric(): #Si info tiene un número adentro.
+            if str(info).isnumeric():
                 if ((str(info) in str(j)) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
                     lista_encontradas.append(i)
             else:
                 if ((info in str(j)) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
-                    lista_encontradas.append(i)
+                      lista_encontradas.append(i)
 
     return Response (render_template("peliculas.html",
       nombre_peliculas=[i["nombre"] for i in lista_encontradas],
-      imagenes_peliculas=[i["img"] for i in lista_encontradas],
-      user=controller.funciones.verify()),
+      imagenes_peliculas=[i["img"] for i in lista_encontradas]),
       status = HTTPStatus.OK)
 
 @app.route("/buscar", methods=["POST"])
 def buscar_post():
+
     informacion=request.form["info_buscar"]
     #print(informacion)
+
     return redirect(url_for("buscar", info=informacion, next="edit"), Response=HTTPStatus.OK) 
     #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
@@ -76,8 +71,7 @@ def login():
     return Response (render_template("peliculas.html", user=user, nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
   return render_template('perfil.html')
 
-# Logout
-# ///////////////////////////////////////////////////////////////////////////////////////////////////
+
 @app.route('/logout')
 def logout():
   session.pop('username', None)
@@ -85,6 +79,7 @@ def logout():
 
 # UNA Peli
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
+  
 @app.route('/pelicula/<nombrePelicula>')
 def pelicula(nombrePelicula):
   pelis = controller.funciones.moviesFiles()
@@ -115,15 +110,12 @@ def agregarPelicula():
         "sinopsis":request.form['sinopsis']
     }
     controller.funciones.agregarPeliculas(pelicula, session['username'])
-  return render_template('agregarPeli.html', directores=controller.funciones.directores, generos=controller.funciones.generos, user=controller.funciones.verify())
+  return render_template('agregarPeli.html', directores=controller.funciones.directores, generos=controller.funciones.generos)
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-# Editar película
-@app.route("/pelicula/editar/<nombrePelicula>", methods=['GET',"POST"])
-def editarPelicula(nombrePelicula):
-  return render_template("editarPeli.html",usuario=nombrePelicula)
-
-# ///////////////////////////////////////////////////////////////////////////////////////////////////
+@app.route("/pelicula/editar/<peli>",methods=["GET","POST"])
+def editarPeli(peli):
+  return render_template("editarPeli.html")
 
 if __name__ == "__main__":
   app.run(debug=True)
