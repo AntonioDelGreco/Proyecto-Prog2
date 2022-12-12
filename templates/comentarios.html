@@ -1,16 +1,5 @@
 {% extends './peliculas.html' %}
 
-{% block mod %}
-<form method="get" action="/peliculas">
-  <button class="boton-menu"> 
-      <p>Editar</p>
-  </button>
-  <button class="boton-menu"> 
-    <p>Eliminar</p>
-</button>
-</form>
-{% endblock %}
-
 {% block content %}
 <h1>{{unaPeli.nombre}}</h1>
 <img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}">
@@ -18,13 +7,18 @@
 <p>{{unaPeli.anio}}</p>
 <p>{{unaPeli.fecha_estreno}}</p>
 <p>{{unaPeli.sinopsis}}</p>
+
 {% for comentario in unaPeli.comentarios%}
   <p>{{comentario.comentario}}</p>
 {% endfor %}
-<form method="get" action="/peliculas">
-  <button class="boton-menu"> 
-      <p>Editar</p>
-  </button>
+
+<div class="editar">
+    <form action="/pelicula/editar/{{unaPeli.nombre}}" method="POST" class="formulario_buscar">
+        <input type="submit" value="Editar" class="boton-menu"/>
+    </form>
+</div>
+
+<form>
   <button class="boton-menu"> 
     <p>Eliminar</p>
 </button>

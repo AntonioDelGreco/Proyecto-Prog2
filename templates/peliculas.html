@@ -4,7 +4,6 @@
         <title>Películas Online</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8">
-
         <link rel="stylesheet" href="../static/css/estilos_index.css">
         <!-- 304 Not Modified en el response de la petición indica que no hay necesidad de retransmitir los recursos solicitados. -->
     </head>
@@ -43,12 +42,13 @@
                       </a>
                       {% else %}
                       {{user}}
-                      <a href="{{url_for('logout')}}">Cerrar sesion</a>
-                      <a href="{{url_for('agregarPelicula')}}">Agregar Pelicula</a>
+                      <a href="{{url_for('logout')}}" id="cerrar_sesion">Cerrar sesion</a>
+                      <a href="{{url_for('agregarPelicula')}}" id="agregar_pelicula">Agregar Pelicula</a>
                       {% endif %}
                     </div>
                     <div>
                       {% block mod %}
+                      <!--Estaban los botones, editar, eliminar...-->
                       {% endblock %}
                     </div>
                 </nav>
@@ -71,7 +71,7 @@
                                 {% endfor %}
 
                             {% else %}
-                                <h1>No se encontró ninguna película con lo que buscó.</h1>
+                                <h1>No se encontró ninguna película.</h1>
                             {% endif %}
                       </div>
                   </article>
@@ -81,8 +81,5 @@
             <footer>
             </footer>
         </div>
-        <style>
-            
-        </style>
     </body>
 </html>
