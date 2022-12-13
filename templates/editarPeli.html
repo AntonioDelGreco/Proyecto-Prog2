@@ -1,17 +1,13 @@
 {% extends './peliculas.html' %}
 
 {% block content %}
-
 <form method="POST">
     <p>
         <div>
             <label for="nombre">{{ pelicula_encontrada["nombre"] }}</label>
-            <input type="text" name="nombre" autofocus>
+            <input type="text" name="editNombre" placeholder="Nada para 'default'">
         </div>
     </p>
-
-    <button></button>
-    <input type="submit" value="Actualizar">
+    <input type="submit" value="Actualizar" >
 </form>
-
-{% endblock %} 
+{% endblock %}
