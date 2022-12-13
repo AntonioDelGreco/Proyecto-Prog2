@@ -43,6 +43,20 @@ def buscar_post():
     return redirect(url_for("buscar", info=informacion, next="edit"), Response=HTTPStatus.OK) 
     #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
+#Directores, GÃ©neros y Imagenes
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+@app.route("/directores")
+def directores():
+  return Response (render_template("dir_gen.html",directores=controller.funciones.directores),status=HTTPStatus.OK)
+
+@app.route("/generos")
+def generos():
+  return Response (render_template("dir_gen.html",generos=controller.funciones.generos),status=HTTPStatus.OK)
+
+@app.route("/imagenes")
+def imagenes():
+  return Response (render_template("dir_gen_img.html",imagenes=controller.funciones.pelisConImg()),status=HTTPStatus.OK)
+
 # LOGIN
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 @app.route('/login', methods=['GET', 'POST'])
