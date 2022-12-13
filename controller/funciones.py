@@ -49,7 +49,6 @@ def agregarPeliculas(pelicula, userSession):
   with open('./Archivos_JSON_Proyecto/usuarios.json', 'w') as f:
     json.dump(users, f, indent=4)
     f.close()
-  
 
 def verify():
   if 'username' in session:
@@ -57,3 +56,10 @@ def verify():
   else:
     user = ""
   return user
+
+def pelisConImg():
+  imagenes=[]
+  for i in moviesFiles():
+    if i["img"]!="":
+      imagenes.append(i["nombre"])
+  return imagenes
