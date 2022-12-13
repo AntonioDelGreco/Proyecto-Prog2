@@ -63,3 +63,8 @@ def pelisConImg():
     if i["img"]!="":
       imagenes.append(i["nombre"])
   return imagenes
+
+def retornarPeli(peli):
+    for i in moviesFiles():
+        if i["nombre"] == peli:
+            return i
