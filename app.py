@@ -82,8 +82,15 @@ def logout():
 # UNA Peli
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
   
-@app.route('/pelicula/<nombrePelicula>')
+@app.route('/pelicula/<nombrePelicula>', methods=['GET', 'POST'])
 def pelicula(nombrePelicula):
+  if request.method == "POST":
+    coment = {
+      "usuario":session["username"],
+      "comentario":request.form["comentario"]
+    }
+    controller.funciones.hacerComentario(coment, nombrePelicula)
+    return redirect(url_for('index'))
   pelis = controller.funciones.moviesFiles()
   for peli in pelis:
     if peli["nombre"] == nombrePelicula:
