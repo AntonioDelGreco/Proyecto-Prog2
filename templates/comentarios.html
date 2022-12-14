@@ -9,14 +9,24 @@
 <p>{{unaPeli.sinopsis}}</p>
 
 {% for comentario in unaPeli.comentarios%}
-  <p>{{comentario.comentario}}</p>
+  <p><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
 {% endfor %}
-<p>/pelicula/editar/{{unaPeli.nombre}}</p>
+{% if user == "" %}
+<span></span>
+{% else %}
 <div>
   <form action="/pelicula/editar/{{ unaPeli.nombre }}">
-    <button>editar</button>
-    <input type="submit">
+    <input type="submit" value="Editar">
   </form>
-  <!-- <a href="/pelicula/editar/{{ unaPeli.nombre }}">Editar</a> -->
 </div>
+{% if comentarios == 1 %}
+<span></span>
+{% else %}
+<div>
+  <form action="/pelicula/eliminar/{{ unaPeli.nombre }}">
+    <input type="submit" value="Eliminar">
+  </form>
+</div>
+{% endif%}
+{% endif%}
 {% endblock %}

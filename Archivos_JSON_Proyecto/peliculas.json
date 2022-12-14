@@ -72,12 +72,7 @@
         "fecha_estreno": "16 de octubre",
         "director": "Mel Gibson",
         "img": "https://pics.filmaffinity.com/Hasta_el_ltimo_hombre-205606610-large.jpg",
-        "comentarios": [
-            {
-                "id": "2",
-                "comentario": "Estaba muy buena!"
-            }
-        ],
+        "comentarios": [],
         "genero":"Guerra, Drama",
         "sinopsis": "Esta es la historia de Desmond T. Doss, un hombre contrario a la violencia que combati\u00f3 como m\u00e9dico en la Segunda Guerra Mundial sin portar un arma. No dispar\u00f3 ni una bala, pero salv\u00f3 a 75 personas de la muerte en la batalla de la isla de Okinawa. Gracias a su coraje, pas\u00f3 de ser el objeto de las burlas de sus compa\u00f1eros a ser reconocido por su enorme val\u00eda con la entrega de la Medalla de Honor del Congreso, otorgada por primera vez a un objetor de conciencia."
     },
@@ -88,12 +83,7 @@
         "fecha_estreno": "25 de noviembre",
         "director": "Luca Guadagnino",
         "img": "https://es.web.img3.acsta.net/c_310_420/pictures/22/10/25/11/36/5739431.jpg",
-        "comentarios": [
-            {
-                "id": "1",
-                "comentario": "comentario de pepito con id de usuario 1"
-            }
-        ],
+        "comentarios": [],
         "genero":"Drama",
         "sinopsis": "El amor florece entre una joven marginada de la sociedad y un vagabundo sin derechos cuando se embarcan en una odisea de 3.000 millas a trav\u00e9s de las carreteras secundarias de Am\u00e9rica."
     },
@@ -203,12 +193,7 @@
         "fecha_estreno": "14 de octubre",
         "director": "David Gordon Green",
         "img": "https://es.web.img3.acsta.net/pictures/22/09/27/18/12/3710392.jpg",
-        "comentarios": [
-            {
-                "id": "2",
-                "comentario": "Estaba muy buena!"
-            }
-        ],
+        "comentarios": [],
         "genero":"Terror",
         "sinopsis": "Cuatro a\u00f1os despu\u00e9s de la desaparici\u00f3n de Michael Myers, el joven Corey lo encuentra maltrecho en las alcantarillas. Poco a poco, se establece un extra\u00f1o v\u00ednculo entre estos dos personajes unidos por la venganza y la locura."
     },
@@ -252,12 +237,7 @@
         "fecha_estreno": "7 de octubre",
         "director": "Juan Diego Botto",
         "img": "https://pics.filmaffinity.com/En_los_m_rgenes-722944196-large.jpg",
-        "comentarios": [
-            {
-                "id": "3",
-                "comentario": "Estaba muy buena!"
-            }
-        ],
+        "comentarios": [],
         "genero":"Suspenso, Drama",
         "sinopsis": "Rafa, un abogado laboral, pasa un d\u00eda infernal intentando ayudar a un inmigrante que va a perder la custodia de su hija y una mujer a la que van a desahuciar. Sus historias se entrelazan con la de Germ\u00e1n, un empresario arruinado."
     },
@@ -270,12 +250,16 @@
         "img": "http://cineargentinohoy.com.ar/wp-content/uploads/2022/09/ARGENTINA-1985-PV-esp-2-scaled.jpg",
         "comentarios": [
             {
-                "id": "2",
+                "usuario": "elfacha",
                 "comentario": "Estaba muy buena!"
             },
             {
-                "id": "1",
-                "comentario": "Estaba muy buena!"
+                "usuario": "mateito",
+                "comentario": "Desde el principio al final, muy entretenido!"
+            },
+            {
+              "usuario":"usuarioprueba",
+              "comentario":"No me parecio lo mejor."
             }
         ],
         "genero":"Drama",
@@ -290,8 +274,12 @@
         "img": "https://pics.filmaffinity.com/Modelo_77-740028363-large.jpg",
         "comentarios": [
             {
-                "id": "3",
+                "usuario": "usuarioprueba",
                 "comentario": "Estaba horrible!"
+            },
+            {
+              "usuario": "MatildeCarballo",
+              "comentario": "Buena pelicula hasta la mitad!"
             }
         ],
         "genero":"Misterio",
