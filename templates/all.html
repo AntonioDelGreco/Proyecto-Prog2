@@ -1,0 +1,20 @@
+{% extends './peliculas.html' %}
+
+{% block content %}
+<article>
+  <div class="articulos">
+          {% if all|length > 0 %}
+              {% for movie in all %}
+                  <div id="{{movie}}">
+                    <a href="/pelicula/{{ movie['nombre'] }}">
+                      <img src="{{ movie['img'] }}" alt="imagen" width="200px" height="300px"> 
+                    </a>
+                      <p>{{ movie['nombre'] }}</p>
+                  </div>
+              {% endfor %}
+          {% else %}
+              <h1>No se encontró ninguna película.</h1>
+          {% endif %}
+    </div>
+</article>
+{% endblock %}

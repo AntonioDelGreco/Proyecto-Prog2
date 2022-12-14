@@ -2,6 +2,7 @@ from flask import Flask,request,Response,render_template,redirect,url_for, sessi
 from http import HTTPStatus
 import controller.funciones
 import secrets
+import json
 
 app = Flask(__name__)
 app.secret_key = 'c13d6b2d33bc0b22412c0c723fe5acdd2fb3c941052ce7aed61be9e6cb457d1e' # python -c 'import secrets; print(secrets.token_hex())'
@@ -11,7 +12,6 @@ def retornar():
   return redirect(url_for("index"),Response=HTTPStatus.OK) #Busca la funcion "index ya definida en 'app'."
   #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
-@app.route("/peliculas.html",methods=["GET"])
 @app.route("/peliculas",methods=["GET"])
 def index():
   return Response (render_template("peliculas.html", user=controller.funciones.verify(), nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
@@ -43,19 +43,13 @@ def buscar_post():
     return redirect(url_for("buscar", info=informacion, next="edit"), Response=HTTPStatus.OK) 
     #302 Found indica que el recurso solicitado ha sido movido temporalmente a la URL.
 
-#Directores, GÃ©neros y Imagenes
+#Directores, Generos y Imagenes
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
-@app.route("/directores")
-def directores():
-  return Response (render_template("dir_gen.html",directores=controller.funciones.directores),status=HTTPStatus.OK)
-
-@app.route("/generos")
-def generos():
-  return Response (render_template("dir_gen.html",generos=controller.funciones.generos),status=HTTPStatus.OK)
-
-@app.route("/imagenes")
-def imagenes():
-  return Response (render_template("dir_gen_img.html",imagenes=controller.funciones.pelisConImg()),status=HTTPStatus.OK)
+@app.route("/dgi")
+def dGI():
+  return Response (render_template("dir_gen_img.html", 
+  user=controller.funciones.verify(),directores=controller.funciones.directores,
+  generos=controller.funciones.generos, imagenes=controller.funciones.pelisConImg()),status=HTTPStatus.OK)
 
 # LOGIN
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,7 +71,7 @@ def login():
       else:
         user = ""
     return Response (render_template("peliculas.html", user=user, nombre_peliculas=controller.funciones.nombresPeliculas(), imagenes_peliculas=controller.funciones.imgPeliculas()), status = HTTPStatus.OK)
-  return render_template('perfil.html')
+  return render_template('perfil.html', user=controller.funciones.verify())
 
 
 @app.route('/logout')
@@ -94,7 +88,7 @@ def pelicula(nombrePelicula):
   for peli in pelis:
     if peli["nombre"] == nombrePelicula:
       unaPeli = peli
-      return render_template('comentarios.html', unaPeli=unaPeli, user=controller.funciones.verify())
+      return render_template('comentarios.html', unaPeli=unaPeli, user=controller.funciones.verify(), comentarios=controller.funciones.siHayComentarios(nombrePelicula))
   
 # Agregar Pelicula
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -119,19 +113,42 @@ def agregarPelicula():
     }
     controller.funciones.agregarPeliculas(pelicula, session['username'])
   return render_template('agregarPeli.html', directores=controller.funciones.directores, generos=controller.funciones.generos)
+
+# EDICION Y ELIMINACION DE PELICULAS
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
+@app.route('/pelicula/eliminar/<peli>', methods=["GET","POST"])
+def eliminarPeli(peli):
+  if request.method == "POST":
+    controller.funciones.eliminarPeli(peli)
+    return redirect(url_for('index'))
+  return render_template('eliminarPeli.html', peli=peli, user=controller.funciones.verify())
 
 @app.route("/pelicula/editar/<peli>",methods=["GET","POST"])
 def editarPeli(peli):
-    if request.method=="POST":
-      pelicula_mod=controller.funciones.retornarPeli(peli)
-      if request.form["editNombre"]=="":
-        pelicula_mod["nombre"]=pelicula_mod["nombre"]
-      else:
-        pelicula_mod["nombre"]=request.form["editNombre"]
-      return render_template("editarPeli.html",pelicula_encontrada=pelicula_mod)
-    else:
-      return render_template("editarPeli.html",pelicula_encontrada=controller.funciones.retornarPeli(peli))
+  pelicula_mod_id=controller.funciones.retornarPeli(peli)["id"]
+  if request.method=="POST":
+    peliculaEdicion = {
+      "id":pelicula_mod_id,
+      "nombre":request.form['nombre'],
+      "anio":request.form['anio'],
+      "fecha_estreno":request.form['estreno'],
+      "director":request.form['director'],
+      "genero":request.form['genero'],
+      "img":request.form['imagen'],
+      "sinopsis":request.form['sinopsis']
+    }
+    controller.funciones.update(peliculaEdicion)
+    return redirect(url_for('index'))
+  return render_template("editarPeli.html", pelicula_encontrada=controller.funciones.retornarPeli(peli))
+
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+@app.route('/all')
+def allPelis():
+  peliculas = controller.funciones.moviesFiles()
+  return Response (render_template("all.html", user=controller.funciones.verify(), all=peliculas), status = HTTPStatus.OK)
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
+# ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 if __name__ == "__main__":
   app.run(debug=True)

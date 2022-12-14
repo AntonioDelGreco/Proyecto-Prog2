@@ -4,11 +4,7 @@
         "apellido": "guitierrez",
         "usuario": "pepito",
         "id": "1",
-        "peliculas_comentadas": [
-            {
-                "id": "cc79c634b559dd8f9de744c18c3c8346a0a2dedd97fac4d001eed43fa6d36d49"
-            }
-        ],
+        "peliculas_comentadas": [],
         "contrasenia": "contraseniasecreta"
     },
     {
@@ -16,17 +12,7 @@
         "apellido": "Mart\u00ednez",
         "usuario": "mateito",
         "id": "2",
-        "peliculas_comentadas": [
-            {
-                "id": "b004472cb1a67c5425b67ce8888c7fa170da4e2c8d5375dd68b0736e462d3ba4"
-            },
-            {
-                "id": "a671dceaacce8dd159defb38aa0aa3c3807aae9f7b96461a9c77420910b4f72c"
-            },
-            {
-                "id": "aef86f5811afb298bce367b7ca6b463030475a448dff53bcdbd92196cced00ab"
-            }
-        ],
+        "peliculas_comentadas": ["8604251a886b483eada36a144e39a4777f6c1a054bc166aae998c0bb930cf1fb"],
         "contrasenia": "contrasenia123"
     },
     {
@@ -34,14 +20,7 @@
         "apellido": "Facha",
         "usuario": "elfacha",
         "id": "3",
-        "peliculas_comentadas": [
-            {
-                "id": "aef86f5811afb298bce367b7ca6b463030475a448dff53bcdbd92196cced00ab"
-            },
-            {
-                "id": "70a8bfd38be350107837aa4d6cc4749e8d98ae3cdc4d7d3063fdc0361f635266"
-            }
-        ],
+        "peliculas_comentadas": ["8604251a886b483eada36a144e39a4777f6c1a054bc166aae998c0bb930cf1fb"],
         "contrasenia": "nomiresmicontrasenia"
     },
     {
@@ -49,8 +28,7 @@
         "apellido": "Carballo",
         "usuario": "MatildeCarballo",
         "id": "4",
-        "peliculas_comentadas": [
-        ],
+        "peliculas_comentadas": ["6786a9eb86a75a7c217d3e0317930cbae57b2240138212b1d075688c20912675"],
         "contrasenia": "contrasenia.com"
     },
     {
@@ -58,7 +36,7 @@
         "apellido": "prueba",
         "usuario": "usuarioprueba",
         "id": "5",
-        "peliculas_comentadas": [],
+        "peliculas_comentadas": ["6786a9eb86a75a7c217d3e0317930cbae57b2240138212b1d075688c20912675", "8604251a886b483eada36a144e39a4777f6c1a054bc166aae998c0bb930cf1fb"],
         "contrasenia": "123"
     }
 ]

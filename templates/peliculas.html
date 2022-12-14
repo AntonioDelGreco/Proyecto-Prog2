@@ -34,6 +34,8 @@
                     </div>
 
                     <div>
+                      <a href="{{url_for('dGI')}}">Directores, generos e imagenes</a>
+                      <a href="{{url_for('allPelis')}}">Todas las Peliculas</a>
                       {% if user == "" %}
                       <a href="{{url_for('login')}}">
                         <button id="btn-perfil"> 
@@ -79,5 +81,8 @@
             <footer>
             </footer>
         </div>
+
+        <link rel="stylesheet" href="{{url_for('static',filename='css/estilos_index.css')}}">
+        <script src="{{url_for('static', filename='js/js.js')}}"></script>
     </body>
 </html>

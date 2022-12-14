@@ -2,21 +2,21 @@
 
 {% block content %}
 {% if directores|length > 0 %}
-    <h3>Los directores presentes en la plataforma son: </h3>
+    <h2>Los directores presentes en la plataforma son: </h2>
     {% for i in directores %}
         <p> {{i}}</p>
     {% endfor %}
 {% endif %}
 
 {% if generos|length > 0 %}
-    <h3>Los generos presentes en la plataforma son: </h3>
+    <h2>Los generos presentes en la plataforma son: </h2>
     {% for i in generos %}
         <p> {{i}}</p>
     {% endfor %}
 {% endif %}
 
 {% if imagenes|length > 0 %}
-    <h3>Las películas con imágenes cargadas son: </h3>
+    <h2>Las películas con imágenes cargadas son: </h2>
     {% for i in imagenes %}
         <p> {{i}}</p>
     {% endfor %}

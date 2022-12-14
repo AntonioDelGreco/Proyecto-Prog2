@@ -1,13 +1,7 @@
 {% extends './peliculas.html' %}
 
 {% block content %}
-<form method="POST">
-    <p>
-        <div>
-            <label for="nombre">{{ pelicula_encontrada["nombre"] }}</label>
-            <input type="text" name="editNombre" placeholder="Nada para 'default'">
-        </div>
-    </p>
-    <input type="submit" value="Actualizar" >
-</form>
+<h1>{{pelicula_encontrada["nombre"]}}</h1>
+<button value="{{pelicula_encontrada['nombre']}}" class="editarPeli">Editar</button>
+<div id="edicion"></div>
 {% endblock %}
