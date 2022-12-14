@@ -15,8 +15,15 @@
 <span></span>
 {% else %}
 <div>
+  <form method="POST">
+    <label for="hacer-comentario">Tu opinion sobre la pelicula: </label>
+    <textarea name="comentario" id="" cols="50" rows="7"></textarea>
+    <input type="submit" value="Enviar comentario">
+  </form>
+</div>
+<div>
   <form action="/pelicula/editar/{{ unaPeli.nombre }}">
-    <input type="submit" value="Editar">
+    <input type="submit" value="Editar {{unaPeli.nombre}}">
   </form>
 </div>
 {% if comentarios == 1 %}
@@ -24,7 +31,7 @@
 {% else %}
 <div>
   <form action="/pelicula/eliminar/{{ unaPeli.nombre }}">
-    <input type="submit" value="Eliminar">
+    <input type="submit" value="Eliminar {{unaPeli.nombre}}">
   </form>
 </div>
 {% endif%}

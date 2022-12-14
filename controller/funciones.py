@@ -78,6 +78,23 @@ def siHayComentarios(nombrePeli):
       else:
         return 2
 
+def hacerComentario(comentario, pelicula):
+  movies = moviesFiles()
+  users = usersFiles()
+  id = retornarPeli(pelicula)["id"]
+  for movie in movies:
+    if movie["nombre"] == pelicula:
+      movie["comentarios"].append(comentario)
+  for user in users:
+    if user["usuario"] == comentario["usuario"]:
+      user["peliculas_comentadas"].append(id)
+  with open('./Archivos_JSON_Proyecto/usuarios.json', 'w') as f:
+    json.dump(users, f, indent=4)
+    f.close()
+  with open('./Archivos_JSON_Proyecto/peliculas.json', 'w') as f:
+    json.dump(movies, f, indent=4)
+    f.close()
+
 def eliminarPeli(peli):
   movies = moviesFiles()
   for movie in movies:
