@@ -14,10 +14,11 @@
   </div>
 </div>
 
-{% for i in range(unaPeli.comentarios|length) %}
-  <p><strong>{{ usuarios[i] }}:</strong>{{ comentarios[i] }}</p>
-{% endfor %}
 
+
+{% for comentario in unaPeli.comentarios%}
+  <p><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
+{% endfor %}
 {% if user == "" %}
 <span></span>
 {% else %}
