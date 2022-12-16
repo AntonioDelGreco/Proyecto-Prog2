@@ -2,15 +2,22 @@
 
 {% block content %}
 <h1>{{unaPeli.nombre}}</h1>
-<img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}">
-<p>{{unaPeli.director}}</p>
-<p>{{unaPeli.anio}}</p>
-<p>{{unaPeli.fecha_estreno}}</p>
-<p>{{unaPeli.sinopsis}}</p>
+<div class="pelicula">
+  <div class="imagen">
+    <img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}" width="25%" height="25%">
+  </div>
+  <div class="info">
+    <p>{{unaPeli.director}}</p>
+    <p>{{unaPeli.anio}}</p>
+    <p>{{unaPeli.fecha_estreno}}</p>
+    <p>{{unaPeli.sinopsis}}</p>
+  </div>
+</div>
 
-{% for comentario in unaPeli.comentarios%}
-  <p><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
+{% for i in range(unaPeli.comentarios|length) %}
+  <p><strong>{{ usuarios[i] }}:</strong>{{ comentarios[i] }}</p>
 {% endfor %}
+
 {% if user == "" %}
 <span></span>
 {% else %}
