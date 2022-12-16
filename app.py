@@ -92,25 +92,14 @@ def pelicula(nombrePelicula):
     }
     controller.funciones.hacerComentario(coment, nombrePelicula)
     return redirect(url_for('index'))
-
-  for peli in controller.funciones.moviesFiles():
-      if peli["nombre"] == nombrePelicula:
-
-          usuarios=[]
-          comentarios=[]
-
-          for i in peli["comentarios"]:
-              for j in controller.funciones.usersFiles():
-                  if i["id"]==j["id"]:
-                      usuarios.append(j["usuario"])
-                      comentarios.append(i["comentario"])
-        
-          return render_template('comentarios.html', 
-          unaPeli=peli,
-          user=controller.funciones.verify(),
-          comentarios=comentarios,
-          usuarios=usuarios
-          )
+  pelis = controller.funciones.moviesFiles()
+  for peli in pelis:
+    if peli["nombre"] == nombrePelicula:
+      return render_template('comentarios.html', 
+      unaPeli=peli,
+      user=controller.funciones.verify(),
+      comentarios=controller.funciones.siHayComentarios(nombrePelicula),
+      )
   
 # Agregar Pelicula
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
