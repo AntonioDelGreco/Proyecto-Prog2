@@ -1,0 +1,152 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+body {
+    background: linear-gradient(90deg, rgb(74, 213, 255) 10%, rgb(0, 52, 101) 90%);
+}
+
+header nav {
+    display:flex;
+    flex-direction: row;
+}
+
+.boton-menu {
+    /* align-self: center; */
+    width: 125px;
+    height: 40px;
+    margin:5px;
+    font-weight: bold;
+    background-color: rgb(102, 87, 184);
+}
+
+.buscador {
+    position:absolute;
+    right:5%;
+}
+
+.input_buscador {
+    height: 30px;
+    width: 215px;
+}
+
+#btn-perfil {
+    position: absolute;
+    top:0.3%;
+    right:0.25%;
+    border-radius: 50%;
+    border-style:hidden;
+    width: 45px;
+    height: 45px;
+    color:white;
+    background-color: rgb(102, 87, 184);
+}
+
+button:hover {
+    cursor:pointer;
+} 
+
+#btn-perfil:active {
+    background-color: #6c6cffc5;
+}
+
+/* .boton_inicio {
+    width: 100px;
+    height: 80px;
+} */
+.articulos {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.articulos div {
+    position:relative;
+    display:flex;
+    display:inline-block;
+    justify-items: auto;
+    margin:20px;
+    margin-right:auto;
+}
+
+.articulos div p {
+    text-align: center;
+    color: black;
+    background-color: aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    bottom:1.25%;
+    width: 215px;
+    /* opacity: .3; */
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 500px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #5515f6;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #1803f9;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #270dd1;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(74, 213, 255) 10%, rgb(0, 52, 101) 90%);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
