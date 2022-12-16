@@ -28,7 +28,7 @@ def buscar(info):
                 if ((str(info) in str(j)) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
                     lista_encontradas.append(i)
             else:
-                if ((info in str(j)) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
+                if ((info.lower() in str(j).lower()) and (i not in lista_encontradas)) and (len(lista_encontradas)<10):
                       lista_encontradas.append(i)
 
     return Response (render_template("peliculas.html",
