@@ -13,11 +13,11 @@
             <header>
                 <nav>
                     <div>
-                        <form method="get" action="/peliculas">
+                        <a href="{{url_for('index')}}">
                             <button class="boton-menu"> 
                                 <p>Inicio</p>
                             </button>
-                        </form> 
+                        </a>
                     </div>
                        
                     <div class="buscador">
@@ -64,7 +64,7 @@
                                 {% for i in range(nombre_peliculas|length) %}
                                     <div id="{{i}}">
                                       <a href="/pelicula/{{ nombre_peliculas[i] }}">
-                                        <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="200px" height="300px"> 
+                                        <img src="{{ imagenes_peliculas[i] }}" alt="imagen" width="215px" height="325px"> 
                                       </a>
                                         <p>{{ nombre_peliculas[i] }}</p>
                                     </div>
