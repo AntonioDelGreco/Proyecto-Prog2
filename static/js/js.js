@@ -2,6 +2,7 @@ const eliminar = document.querySelector(".eliminarPeli");
 const eliminacion = document.querySelector("#eliminacion");
 const editar = document.querySelector('.editarPeli');
 const edicion = document.querySelector('#edicion');
+
 document.addEventListener('DOMContentLoaded',e => {
   if (e.path[0].URL.includes("http://127.0.0.1:5000/pelicula/editar/")) {
     const inicio = editar;
@@ -17,8 +18,8 @@ document.addEventListener('DOMContentLoaded',e => {
 })
 
 
-async function init(inicio){
-  await inicio.addEventListener("click", e => {
+function init(inicio){
+  inicio.addEventListener("click", e => {
     e.preventDefault();
     const pelicula = e.target.value;
     if (e.target.className === "eliminarPeli") {
