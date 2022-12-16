@@ -61,28 +61,29 @@ button:hover {
     width: 100px;
     height: 80px;
 } */
+.articulos {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+}
 
 .articulos div {
     position:relative;
     display:flex;
     display:inline-block;
-    margin:15px;
-    margin-left: 3%;
+    justify-items: auto;
+    margin:20px;
+    margin-right:auto;
 }
 
 .articulos div p {
-    text-transform: uppercase;
     text-align: center;
     color: black;
     background-color: aliceblue;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    /* position:absolute;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     bottom:1.25%;
-    width: 100%;
-    height: 15%;
-    background: #FF7A59;
-    opacity: .6;
-    align-items: center; */
+    width: 215px;
+    /* opacity: .3; */
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
