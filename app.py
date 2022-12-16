@@ -33,7 +33,8 @@ def buscar(info):
 
     return Response (render_template("peliculas.html",
       nombre_peliculas=[i["nombre"] for i in lista_encontradas],
-      imagenes_peliculas=[i["img"] for i in lista_encontradas]),
+      imagenes_peliculas=[i["img"] for i in lista_encontradas],
+      user=controller.funciones.verify()),
       status = HTTPStatus.OK)
 
 @app.route("/buscar", methods=["POST"])
