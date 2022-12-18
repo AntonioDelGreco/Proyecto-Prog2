@@ -1,6 +1,7 @@
 * {
     padding:0;
     margin: 0;
+    font-family:'Franklin Gothic Medium', 'Verdana', Arial, sans-serif;
 }
 
 header {
@@ -49,7 +50,7 @@ header nav {
     background-color: rgb(102, 87, 184);
 }
 
-button:hover {
+button:hover,form input {
     cursor:pointer;
 } 
 
@@ -80,7 +81,6 @@ button:hover {
     text-align: center;
     color: black;
     background-color: aliceblue;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     bottom:1.25%;
     width: 215px;
     /* opacity: .3; */
@@ -114,6 +114,7 @@ button:hover {
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -128,9 +129,11 @@ button:hover {
   transition: all 0.3 ease;
   cursor: pointer;
 }
+
 .form button:hover,.form button:active,.form button:focus {
   background: #1803f9;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
@@ -145,8 +148,68 @@ button:hover {
 }
 
 body {
-  background: linear-gradient(90deg, rgb(74, 213, 255) 10%, rgb(0, 52, 101) 90%);
+  background-image:url('../img/fondo.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
+}
+
+.pelicula {
+  margin:50px;
+  height: auto;
+  width: auto;
+  display:flex;
+  flex-direction: row;
+  background-color: rgb(192, 117, 250);
+  opacity: .8;
+  border-radius:20px;
+}
+
+.pelicula div {
+  margin:20px;
+}
+
+.info {
+  margin-left:25px;
+}
+
+.comentarios {
+  border-radius:20px;
+  padding:20px;
+  background: linear-gradient(rgb(250, 139, 117),rgb(250, 223, 117));
+}
+
+.pelicula {
+  background: linear-gradient(rgb(117, 117, 250),rgb(192, 117, 250));
+}
+
+.pelicula div h1 {
+  text-align: center;
+  text-decoration:underline;
+  font-size:50px;
+  margin-bottom: 20%;
+  color: white;
+}
+
+.pelicula div h3 {
+  color:white;
+  text-align: center;
+  font-size:35px;
+  margin-bottom: 10%;
+}
+
+.pelicula div p {
+  opacity:1;
+  font-size:22.5px;
+  color:rgb(31, 4, 77);
+}
+
+#director, #anio, #fecha_estreno, #sinopsis {
+  margin-bottom: 15%;
+}
+
+strong {
+  color:black;
 }
