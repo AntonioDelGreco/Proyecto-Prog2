@@ -1,47 +1,54 @@
 {% extends './peliculas.html' %}
 
 {% block content %}
-<h1>{{unaPeli.nombre}}</h1>
+
 <div class="pelicula">
   <div class="imagen">
-    <img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}" width="25%" height="25%">
+    <img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}" width="450px" height="700px">
   </div>
   <div class="info">
-    <p>{{unaPeli.director}}</p>
-    <p>{{unaPeli.anio}}</p>
-    <p>{{unaPeli.fecha_estreno}}</p>
-    <p>{{unaPeli.sinopsis}}</p>
+    <h1>{{unaPeli.nombre}}</h1>
+
+    <p id="director"><strong>Director/es:</strong> {{unaPeli.director}}</p>
+    <p id="anio"><strong>Año de estreno:</strong> {{unaPeli.anio}}</p>
+    <p id="fecha_estreno"><strong>Fecha de estreno:</strong> {{unaPeli.fecha_estreno}}</p>
+    <p id="sinopsis"><strong>Sinopsis:</strong> {{unaPeli.sinopsis}}</p>
+  </div>
+  <div class="comentarios">
+    <h3>Comentarios</h3>
+        <!--Comentarios-->
+    {% for comentario in unaPeli.comentarios%}
+    <p><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
+    <br>
+    {% endfor %}
+    {% if user == "" %}
+    <span></span>
+    {% else %}
+    <div>
+    <form method="POST">
+      <label for="hacer-comentario">Tu opinion sobre la pelicula: </label>
+      <textarea name="comentario" id="" cols="50" rows="7"></textarea>
+      <input type="submit" value="Enviar comentario">
+    </form>
+    </div>
+    <div>
+    <form action="/pelicula/editar/{{ unaPeli.nombre }}">
+      <input type="submit" value="Editar {{unaPeli.nombre}}">
+    </form>
+    </div>
+    {% if comentarios == 1 %}
+    <span></span>
+    {% else %}
+    <div>
+    <form action="/pelicula/eliminar/{{ unaPeli.nombre }}">
+      <input type="submit" value="Eliminar {{unaPeli.nombre}}">
+    </form>
+    </div>
+    {% endif%}
+    {% endif%}
   </div>
 </div>
 
 
 
-{% for comentario in unaPeli.comentarios%}
-  <p><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
-{% endfor %}
-{% if user == "" %}
-<span></span>
-{% else %}
-<div>
-  <form method="POST">
-    <label for="hacer-comentario">Tu opinion sobre la pelicula: </label>
-    <textarea name="comentario" id="" cols="50" rows="7"></textarea>
-    <input type="submit" value="Enviar comentario">
-  </form>
-</div>
-<div>
-  <form action="/pelicula/editar/{{ unaPeli.nombre }}">
-    <input type="submit" value="Editar {{unaPeli.nombre}}">
-  </form>
-</div>
-{% if comentarios == 1 %}
-<span></span>
-{% else %}
-<div>
-  <form action="/pelicula/eliminar/{{ unaPeli.nombre }}">
-    <input type="submit" value="Eliminar {{unaPeli.nombre}}">
-  </form>
-</div>
-{% endif%}
-{% endif%}
 {% endblock %}
