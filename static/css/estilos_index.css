@@ -59,7 +59,7 @@ header nav {
 
 #btn-perfil {
     position: absolute;
-    top:0.3%;
+    top:2.5px;
     right:0.25%;
     border-radius: 50%;
     border-style:hidden;
@@ -74,7 +74,7 @@ button:hover,form input {
 } 
 
 #btn-perfil:active {
-    background-color: #6c6cffc5;
+  background-color: rgb(102, 87, 184);
 }
 
 /* .boton_inicio {
@@ -150,8 +150,16 @@ button:hover,form input {
   cursor: pointer;
 }
 
+#boton_iniciar_sesion, #btn-perfil:hover {
+  background: #5515f6;
+}
+
 .form button:hover,.form button:active,.form button:focus {
   background: #1803f9;
+}
+
+#boton_eliminar:hover, #boton_editar:hover, #boton_iniciar_sesion:hover {
+  background-color: #6751f5;
 }
 
 .form .message {
@@ -305,10 +313,6 @@ strong {
   cursor: pointer;
 }
 
-#boton_editar, #boton_eliminar {
-  font-size:50px;
-}
-
 /*Tu opinion sobre la pelicula:*/
 .caja_opciones .hacer_comentario label {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -439,7 +443,7 @@ li {
   top:675px;
 }
 
-#editarPeli_h1 {
+#editarPeli_h1, #eliminarPeli_h1 {
   text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.818);
   color:rgb(239, 185, 98);
   text-align: center;
@@ -449,7 +453,7 @@ li {
 }
 
 /*botón editar peli*/
-.editarPeli {
+.editarPeli, .eliminarPeli {
   height: 75px;
   width: 250px;
   background-color: rgb(234, 154, 57);
@@ -461,13 +465,13 @@ li {
   font-family: 'Times New Roman', Times, serif;
 }
 
-.caja_editar {
+.caja_editar, .caja_eliminar {
   width: 500px;
   padding: 8% 0 0;
   margin: auto;
 }
 
-.caja_editar button {
+.caja_editar button, .caja_eliminar button {
   margin-top: 75px;
   margin-left:115px;
   position: relative;
