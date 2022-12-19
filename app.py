@@ -105,6 +105,8 @@ def pelicula(nombrePelicula):
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 @app.route('/pelicula/agregar', methods=['GET', 'POST'])
 def agregarPelicula():
+  if 'username' not in session:
+    return redirect(url_for('index'))
   if request.method == 'POST':
     pelicula = {
         "id":secrets.token_hex(),
@@ -116,8 +118,8 @@ def agregarPelicula():
         "img":request.form['imagen'],
         "comentarios":[
           {
-            "idComent":secrets.token_hex(),
-            "opinion":request.form['opinion']
+            "usuario":session["username"],
+            "comentario":request.form['opinion']
           }
         ],
         "sinopsis":request.form['sinopsis']
@@ -129,28 +131,34 @@ def agregarPelicula():
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 @app.route('/pelicula/eliminar/<peli>', methods=["GET","POST"])
 def eliminarPeli(peli):
-  if request.method == "POST":
-    controller.funciones.eliminarPeli(peli)
+  if 'username' not in session:
     return redirect(url_for('index'))
-  return render_template('eliminarPeli.html', peli=peli, user=controller.funciones.verify())
+  else:
+    if request.method == "POST":
+      controller.funciones.eliminarPeli(peli)
+      return redirect(url_for('index'))
+    return render_template('eliminarPeli.html', peli=peli, user=controller.funciones.verify())
 
 @app.route("/pelicula/editar/<peli>",methods=["GET","POST"])
 def editarPeli(peli):
-  pelicula_mod_id=controller.funciones.retornarPeli(peli)["id"]
-  if request.method=="POST":
-    peliculaEdicion = {
-      "id":pelicula_mod_id,
-      "nombre":request.form['nombre'],
-      "anio":request.form['anio'],
-      "fecha_estreno":request.form['estreno'],
-      "director":request.form['director'],
-      "genero":request.form['genero'],
-      "img":request.form['imagen'],
-      "sinopsis":request.form['sinopsis']
-    }
-    controller.funciones.update(peliculaEdicion)
+  if 'username' not in session:
     return redirect(url_for('index'))
-  return render_template("editarPeli.html", pelicula_encontrada=controller.funciones.retornarPeli(peli))
+  else:
+    pelicula_mod_id=controller.funciones.retornarPeli(peli)["id"]
+    if request.method=="POST":
+      peliculaEdicion = {
+        "id":pelicula_mod_id,
+        "nombre":request.form['nombre'],
+        "anio":request.form['anio'],
+        "fecha_estreno":request.form['estreno'],
+        "director":request.form['director'],
+        "genero":request.form['genero'],
+        "img":request.form['imagen'],
+        "sinopsis":request.form['sinopsis']
+      }
+      controller.funciones.update(peliculaEdicion)
+      return redirect(url_for('index'))
+    return render_template("editarPeli.html", pelicula_encontrada=controller.funciones.retornarPeli(peli))
 
 # ///////////////////////////////////////////////////////////////////////////////////////////////////
 
