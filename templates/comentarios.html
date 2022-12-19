@@ -3,8 +3,12 @@
 {% block content %}
 
 <div class="pelicula">
+  <div class="caja_comentarios"></div>
+</div>
+
+<div class="info_pelicula">
   <div class="imagen">
-    <img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}" width="450px" height="700px">
+    <img src="{{unaPeli.img}}" alt="{{unaPeli.nombre}}" width="350px" height="700px">
   </div>
   <div class="info">
     <h1>{{unaPeli.nombre}}</h1>
@@ -17,10 +21,14 @@
   <div class="comentarios">
     <h3>Comentarios</h3>
         <!--Comentarios-->
-    {% for comentario in unaPeli.comentarios%}
-    <p><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
-    <br>
-    {% endfor %}
+        <div class="seccion_comentarios">
+          {% for comentario in unaPeli.comentarios%}
+
+              <p id="comentario_usuario"><strong>{{comentario['usuario']}}: </strong>{{comentario.comentario}}</p>
+
+            <br>
+          {% endfor %}
+        </div>
     {% if user == "" %}
     <span></span>
     {% else %}
