@@ -440,7 +440,8 @@ li {
 }
 
 #editarPeli_h1 {
-  color: white;
+  text-shadow: 0.1em 0.1em 0.2em black;
+  color:rgb(98, 239, 126);
   text-align: center;
   margin-top: 50px;
   margin-bottom: -50px;
@@ -449,9 +450,6 @@ li {
 
 /*botón editar peli*/
 .editarPeli {
-  position: absolute;
-  left:41%;
-  top:30%;
   height: 75px;
   width: 250px;
   background-color: rgb(234, 154, 57);
@@ -461,4 +459,17 @@ li {
   font-size: 40px;
   color:white;
   font-family: 'Times New Roman', Times, serif;
+}
+
+.caja_editar {
+  width: 500px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.caja_editar button {
+  margin-top: 75px;
+  margin-left:115px;
+  position: relative;
+  z-index: 1;
 }
