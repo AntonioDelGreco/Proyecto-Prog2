@@ -1,7 +1,9 @@
 {% extends './peliculas.html' %}
 
 {% block content %}
-<h1>{{peli}}</h1>
-<button value="{{peli}}" class="eliminarPeli">Eliminar</button>
+<div class="caja_eliminar">
+    <h1 id="eliminarPeli_h1">{{peli}}</h1>
+    <button value="{{peli}}" class="eliminarPeli">Eliminar</button>
+</div>
 <div id="eliminacion"></div>
 {% endblock %}
