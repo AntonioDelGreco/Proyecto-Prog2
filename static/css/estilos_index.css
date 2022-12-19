@@ -440,8 +440,8 @@ li {
 }
 
 #editarPeli_h1 {
-  text-shadow: 0.1em 0.1em 0.2em black;
-  color:rgb(98, 239, 126);
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.818);
+  color:rgb(239, 185, 98);
   text-align: center;
   margin-top: 50px;
   margin-bottom: -50px;
@@ -472,4 +472,14 @@ li {
   margin-left:115px;
   position: relative;
   z-index: 1;
+}
+
+.articulos h1 {
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  z-index: 1;
+  margin-top: 125px;
+  font-size: 75px;
+  text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.729);
 }
