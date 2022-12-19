@@ -2,7 +2,6 @@ from flask import Flask,request,Response,render_template,redirect,url_for, sessi
 from http import HTTPStatus
 import controller.funciones
 import secrets
-import json
 
 app = Flask(__name__)
 app.secret_key = 'c13d6b2d33bc0b22412c0c723fe5acdd2fb3c941052ce7aed61be9e6cb457d1e' # python -c 'import secrets; print(secrets.token_hex())'
