@@ -4,27 +4,27 @@
 <form method="POST">
     <div>
       <label for="nombre">Nombre de la pelicula:</label>
-      <input type="text" name="nombre" required autofocus>
-    </div> 
+      <input type="text" name="nombre" required autofocus id="input_texto">
+    </div>
     <div>
       <label for="imagen">Imagen:</label>
-      <input type="text" name="imagen" required pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|bmp|tif|png))(?:\?([^#]*))?(?:#(.*))?" placeholder="Link de imágen">
+      <input type="text" name="imagen" required pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|bmp|tif|png))(?:\?([^#]*))?(?:#(.*))?" placeholder="Link de imágen" id="input_texto">
     </div>
     <div>
       <label for="anio">Anio:</label>
-      <input type="text" name="anio">
+      <input type="text" name="anio" id="input_texto">
     </div>
     <div>
       <label for="estreno">Fecha de estreno:</label>
-      <input type="text" name="estreno" placeholder="1 de Septiembre" required>
+      <input type="text" name="estreno" placeholder="1 de Septiembre" required id="input_texto">
     </div>
     <div>
       <label for="opinion">Tu opinion</label>
-      <input type="text" name="opinion" required>
+      <input type="text" name="opinion" required id="input_texto">
     </div>
     <div>
       <label for="estreno">Sinopsis</label>
-      <input type="text" name="sinopsis" required>
+      <input type="text" name="sinopsis" required id="input_texto">
     </div>
   <div>
     <label for="nombre">Directores disponibles</label>
