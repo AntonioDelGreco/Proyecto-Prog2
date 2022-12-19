@@ -25,12 +25,24 @@ header nav {
     height: 40px;
     margin:5px;
     font-weight: bold;
+    font-size:17.5px;
     background-color: rgb(102, 87, 184);
+    color:white;
+}
+
+.boton-menu p {
+  font-size:17.5px;
+  color:white;
 }
 
 .buscador {
     position:absolute;
     right:5%;
+}
+
+#input_texto {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  cursor:auto;
 }
 
 .input_buscador {
@@ -75,6 +87,7 @@ button:hover,form input {
     justify-items: auto;
     margin:20px;
     margin-right:auto;
+    justify-content: center;
 }
 
 .articulos div p {
@@ -83,6 +96,7 @@ button:hover,form input {
     background-color: aliceblue;
     bottom:1.25%;
     width: 215px;
+    height:25px;
     /* opacity: .3; */
 }
 
@@ -157,35 +171,44 @@ body {
 }
 
 .pelicula {
-  margin:50px;
-  height: auto;
-  width: auto;
+  margin:12.5px;
+  width: 97.5%;
+  height: 750px;
   display:flex;
   flex-direction: row;
-  background-color: rgb(192, 117, 250);
   opacity: .8;
   border-radius:20px;
+}
+
+.caja_comentarios {
+  right:1.5%;
+  position: absolute;
+  top:65px;
+  width: 25%;
+  height:700px;
+  border-radius:20px;
+  background: linear-gradient(rgb(250, 139, 117),rgb(250, 223, 117));
 }
 
 .pelicula div {
   margin:20px;
 }
 
-.info {
-  margin-left:25px;
-}
-
-.comentarios {
-  border-radius:20px;
-  padding:20px;
-  background: linear-gradient(rgb(250, 139, 117),rgb(250, 223, 117));
+.info_pelicula .imagen {
+  position: absolute;
+  top:90px;
+  margin-left:37.5px;
 }
 
 .pelicula {
   background: linear-gradient(rgb(117, 117, 250),rgb(192, 117, 250));
 }
 
-.pelicula div h1 {
+/*h1 para la caja de info_pelicula (la principal)*/
+.info_pelicula div h1 {
+  position:absolute;
+  top:65px;
+  left:42.5%;
   text-align: center;
   text-decoration:underline;
   font-size:50px;
@@ -193,21 +216,79 @@ body {
   color: white;
 }
 
-.pelicula div h3 {
+/*h3 es para la caja de comentarios*/
+.info_pelicula div h3 {
+  position:absolute;
+  top:90px;
+  right:7%;
   color:white;
   text-align: center;
   font-size:35px;
   margin-bottom: 10%;
 }
 
-.pelicula div p {
+/* .info_pelicula div p {
+  top:140px;
+  left:42.5%;
+  width: 200px;
+  position:absolute;
   opacity:1;
   font-size:22.5px;
   color:rgb(31, 4, 77);
-}
+} */
 
 #director, #anio, #fecha_estreno, #sinopsis {
+  font-family: 'Times New Roman', Times, serif;
+  font-size:25px;
+  width: 37.5%;
+  left:32.5%;
+  color:rgb(31, 4, 77);
   margin-bottom: 15%;
+}
+
+#director {
+  top:200px;
+  position:absolute;
+}
+
+#anio {
+  top:250px;
+  position:absolute;
+}
+
+#fecha_estreno {
+  top:300px;
+  position:absolute;
+}
+
+#sinopsis {
+  top:350px;
+  position:absolute;
+}
+
+/*informacion de los comentarios*/
+/* .comentarios {
+  display:flex;
+  flex-direction: row;
+  right:20%;
+  top:200px;
+  position:absolute;
+  width: 300px;
+  height:300px;
+} */
+
+.seccion_comentarios {
+  font-size:22.5px;
+  display:flex;
+  top:200px;
+  width:20%;
+  right:7%;
+  flex-direction: column;
+  position: absolute;
+}
+
+.seccion_comentarios p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 strong {
