@@ -25,8 +25,12 @@ function init(inicio){
     if (e.target.className === "eliminarPeli") {
       const form = {
         formulario:`
-        <label for="eliminar">Esta seguro que desea eliminar: <strong>${pelicula}</strong>? presione eliminar para completar, de lo contrario vuelva al inicio.</label>
-        <input type="submit" value="Eliminar" name="eliminar">
+        <div class="cuadro">
+          <div class="form">
+            <label for="eliminar">Esta seguro que desea eliminar: <strong>${pelicula}</strong>? presione eliminar para completar, de lo contrario vuelva al inicio.</label>
+            <input type="submit" value="Eliminar" name="eliminar" id="boton_eliminar">
+          </div>
+        </div>
         `,
         clas:"eliminar_peli",
         desde: eliminar,
@@ -115,7 +119,7 @@ function init(inicio){
                 <option value="western">western</option>
                 </select>
               </div>
-            <input type="submit" value="editar">
+            <input type="submit" value="Editar" id="boton_editar">
           </div>
         </div>
         `,
