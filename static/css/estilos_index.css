@@ -54,7 +54,9 @@ header nav {
 .input_buscador {
     height: 30px;
     width: 215px;
-    border-radius:50px;
+    border-radius:20px;
+    border:black;
+    outline:0;
 }
 
 #btn-perfil {
@@ -71,7 +73,7 @@ header nav {
 
 button:hover,form input {
     cursor:pointer;
-} 
+}
 
 #btn-perfil:active {
   background-color: rgb(102, 87, 184);
