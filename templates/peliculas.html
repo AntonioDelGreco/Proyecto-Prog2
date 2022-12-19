@@ -33,20 +33,30 @@
                         </form>
                     </div>
 
-                    <div>
-                      <a href="{{url_for('dGI')}}">Directores, generos e imagenes</a>
-                      <a href="{{url_for('allPelis')}}">Todas las Peliculas</a>
-                      {% if user == "" %}
-                      <a href="{{url_for('login')}}">
-                        <button id="btn-perfil"> 
-                          <span class="material-icons">manage_accounts</span>
-                        </button>
-                      </a>
-                      {% else %}
-                      {{user}}
-                      <a href="{{url_for('logout')}}" id="cerrar_sesion">Cerrar sesion</a>
-                      <a href="{{url_for('agregarPelicula')}}" id="agregar_pelicula">Agregar Pelicula</a>
-                      {% endif %}
+                    <div class="secciones_nav_header">
+                        <div class="publico">
+                            <a href="{{url_for('dGI')}}">Directores, generos e imagenes</a>
+                            <a href="{{url_for('allPelis')}}">Todas las Peliculas</a>
+                        </div>
+                        <div class="privado">
+                            {% if user == "" %}
+                            <a href="{{url_for('login')}}">
+                              <button id="btn-perfil"> 
+                                <span class="material-icons">manage_accounts</span>
+                              </button>
+                            </a>
+                            {% else %}
+                            <div class="caja_etiqueta">
+                                <a href="{{url_for('logout')}}" id="etiqueta_header">Cerrar sesion</a>
+                                <a href="{{url_for('agregarPelicula')}}" id="etiqueta_header">Agregar Pelicula</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="nombre_user">
+                            {% if user != "" %}
+                            <p id="nombre_usuario">{{user}}</p>
+                            {% endif %}
+                        </div>
                     </div>
                     <div>
                       {% block mod %}
