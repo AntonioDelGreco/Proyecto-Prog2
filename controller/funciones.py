@@ -37,15 +37,10 @@ def agregarPeliculas(pelicula, userSession):
   with open('./Archivos_JSON_Proyecto/peliculas.json', 'w') as f:
     json.dump(movies, f, indent=4)
     f.close()
-  for idCom in pelicula['comentarios']:
-    idComentario = idCom['idComent']
   users = usersFiles()
   for user in users:
     if userSession == user['usuario']:
-      user['peliculas_comentadas'] = [{
-        "idPeli":pelicula['id'],
-        "idComentario":idComentario
-      }]
+      user['peliculas_comentadas'].append(pelicula['id'])
   with open('./Archivos_JSON_Proyecto/usuarios.json', 'w') as f:
     json.dump(users, f, indent=4)
     f.close()
