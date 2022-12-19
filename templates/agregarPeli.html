@@ -1,49 +1,53 @@
 {% extends './peliculas.html' %}
 
 {% block content %}
-<form method="POST">
-    <div>
-      <label for="nombre">Nombre de la pelicula:</label>
-      <input type="text" name="nombre" required autofocus id="input_texto">
-    </div>
-    <div>
-      <label for="imagen">Imagen:</label>
-      <input type="text" name="imagen" required pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|bmp|tif|png))(?:\?([^#]*))?(?:#(.*))?" placeholder="Link de imágen" id="input_texto">
-    </div>
-    <div>
-      <label for="anio">Anio:</label>
-      <input type="text" name="anio" id="input_texto">
-    </div>
-    <div>
-      <label for="estreno">Fecha de estreno:</label>
-      <input type="text" name="estreno" placeholder="1 de Septiembre" required id="input_texto">
-    </div>
-    <div>
-      <label for="opinion">Tu opinion</label>
-      <input type="text" name="opinion" required id="input_texto">
-    </div>
-    <div>
-      <label for="estreno">Sinopsis</label>
-      <input type="text" name="sinopsis" required id="input_texto">
-    </div>
-  <div>
-    <label for="nombre">Directores disponibles</label>
-    <select name="director" required>
-      <option value="">Director</option>
-      {% for director in directores %}
-        <option value="{{director}}">{{director}}</option>
-      {% endfor %}
-    </select>
+<div class="caja_editar">
+  <div class="form">
+    <form method="POST">
+      <div>
+        <label for="nombre">Nombre de la pelicula:</label>
+        <input type="text" name="nombre" required autofocus id="input_texto">
+      </div>
+      <div>
+        <label for="imagen">Imagen:</label>
+        <input type="text" name="imagen" required pattern="(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|bmp|tif|png))(?:\?([^#]*))?(?:#(.*))?" placeholder="Link de imágen" id="input_texto">
+      </div>
+      <div>
+        <label for="anio">Anio:</label>
+        <input type="text" name="anio" required id="input_texto">
+      </div>
+      <div>
+        <label for="estreno">Fecha de estreno:</label>
+        <input type="text" name="estreno" placeholder="1 de Septiembre" required id="input_texto">
+      </div>
+      <div>
+        <label for="opinion">Tu opinion</label>
+        <input type="text" name="opinion" required id="input_texto">
+      </div>
+      <div>
+        <label for="estreno">Sinopsis</label>
+        <input type="text" name="sinopsis" required id="input_texto">
+      </div>
+      <div>
+        <label for="nombre">Directores disponibles</label>
+        <select name="director" required>
+          <option value="">Director</option>
+          {% for director in directores %}
+            <option value="{{director}}">{{director}}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div>
+        <label for="nombre">Generos disponibles</label>
+        <select name="genero" required>
+          <option value="">Género</option>
+        {% for genero in generos %}
+          <option value="{{genero}}">{{genero}}</option>
+        {% endfor %}
+      </select>
+      </div>
+      <input type="submit">
+    </form>
   </div>
-  <div>
-    <label for="nombre">Generos disponibles</label>
-    <select name="genero" required>
-      <option value="">Género</option>
-    {% for genero in generos %}
-      <option value="{{genero}}">{{genero}}</option>
-    {% endfor %}
-  </select>
-  </div>
-  <input type="submit">
-</form>
+</div>
 {% endblock %}
