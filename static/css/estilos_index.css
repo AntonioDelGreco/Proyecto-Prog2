@@ -20,6 +20,8 @@ header nav {
 }
 
 .boton-menu {
+    border: 0;
+    outline: 0;
     /* align-self: center; */
     width: 125px;
     height: 40px;
@@ -33,6 +35,10 @@ header nav {
 .boton-menu p {
   font-size:17.5px;
   color:white;
+}
+
+.boton-menu:hover, .editarPeli:hover {
+  background-color: rgb(147, 138, 198);
 }
 
 .buscador {
@@ -102,7 +108,7 @@ button:hover,form input {
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-.login-page {
+.cuadro {
   width: 500px;
   padding: 8% 0 0;
   margin: auto;
@@ -431,4 +437,28 @@ li {
   position: absolute;
   left:50px;
   top:675px;
+}
+
+#editarPeli_h1 {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  font-size: 70px;
+}
+
+/*botón editar peli*/
+.editarPeli {
+  position: absolute;
+  left:41%;
+  top:30%;
+  height: 75px;
+  width: 250px;
+  background-color: rgb(234, 154, 57);
+  outline: 0;
+  border:0;
+  border-radius: 10px;
+  font-size: 40px;
+  color:white;
+  font-family: 'Times New Roman', Times, serif;
 }
