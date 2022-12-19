@@ -39,12 +39,12 @@
       </div>
       <div>
         <label for="nombre">Generos disponibles</label>
-        <select name="genero" required>
-          <option value="">Género</option>
-        {% for genero in generos %}
-          <option value="{{genero}}">{{genero}}</option>
-        {% endfor %}
-      </select>
+          <select name="genero" required>
+            <option value="">Género</option>
+              {% for genero in generos %}
+                <option value="{{genero}}">{{genero}}</option>
+              {% endfor %}
+          </select>
       </div>
       <input type="submit">
     </form>
