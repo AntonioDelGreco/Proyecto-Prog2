@@ -65,7 +65,7 @@ function init(inicio){
             <div>
                 <label for="nombre">Directores disponibles</label>
                 <select name="director" required>
-                  <option disabled selected>Director</option>
+                  <option value="">Director</option>
                   <option value="Oriol Paulo">Oriol Paulo</option>
                   <option value="Gary Dauberman">Gary Dauberman</option>
                   <option value="Justin Lin">Justin Lin</option>
@@ -95,6 +95,7 @@ function init(inicio){
               <div>
                 <label for="nombre">Generos disponibles</label>
                 <select name="genero" required>
+                <option value="">Género</option>
                 <option value="accion">accion</option>
                 <option value="aventuras">aventuras</option>
                 <option value="ciencia ficcion">ciencia ficcion</option>
