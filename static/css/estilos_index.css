@@ -37,7 +37,7 @@ header nav {
 
 .buscador {
     position:absolute;
-    right:5%;
+    right:10%;
 }
 
 #input_texto {
@@ -172,7 +172,7 @@ body {
 
 .pelicula {
   margin:12.5px;
-  width: 97.5%;
+  width: auto;
   height: 750px;
   display:flex;
   flex-direction: row;
@@ -181,7 +181,7 @@ body {
 }
 
 .caja_comentarios {
-  right:1.5%;
+  right:1%;
   position: absolute;
   top:65px;
   width: 25%;
@@ -207,12 +207,12 @@ body {
 /*h1 para la caja de info_pelicula (la principal)*/
 .info_pelicula div h1 {
   position:absolute;
-  top:65px;
-  left:40%;
+  top:70px;
+  width: 450px;
+  left:32.5%;
   text-align: center;
   text-decoration:underline;
   font-size:50px;
-  margin-bottom: 20%;
   color: white;
 }
 
@@ -224,7 +224,6 @@ body {
   color:white;
   text-align: center;
   font-size:35px;
-  margin-bottom: 10%;
 }
 
 #director, #anio, #fecha_estreno, #sinopsis {
@@ -237,29 +236,29 @@ body {
 }
 
 #director {
-  top:200px;
-  position:absolute;
-}
-
-#anio {
   top:250px;
   position:absolute;
 }
 
-#fecha_estreno {
+#anio {
   top:300px;
   position:absolute;
 }
 
-#sinopsis {
+#fecha_estreno {
   top:350px;
+  position:absolute;
+}
+
+#sinopsis {
+  top:400px;
   position:absolute;
 }
 
 .seccion_comentarios {
   font-size:22.5px;
   display:flex;
-  top:200px;
+  top:175px;
   width:20%;
   right:7%;
   flex-direction: column;
@@ -278,7 +277,7 @@ strong {
 
 .caja_opciones .caja {
   margin:12.5px;
-  width: 97.5%;
+  width: auto;
   height: 195px;
   display:flex;
   flex-direction: row;
@@ -339,4 +338,42 @@ strong {
 #boton_enviar_comentario {
   border-radius:20px;
   width: 25%;
+}
+
+.secciones_nav_header {
+  display:flex;
+  flex-direction: row;
+  color:rgb(192, 117, 250);
+}
+
+.secciones_nav_header a {
+  color:rgb(248, 243, 248);
+}
+
+.secciones_nav_header a:active {
+  color:rgb(223, 184, 223);
+}
+
+.publico {
+  width: auto;
+  margin-top:6px;
+  display:flex;
+  flex-direction: column;
+}
+
+.privado .caja_etiqueta {
+  margin-top:6px;
+  position: absolute;
+  width: auto;
+  left:37.5%;
+}
+
+.privado a {
+  display:flex;
+}
+
+.nombre_user {
+  position: absolute;
+  right:1%;
+  top:14px;
 }
